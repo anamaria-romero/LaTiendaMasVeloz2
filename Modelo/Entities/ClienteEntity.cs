@@ -8,9 +8,9 @@ namespace Modelo.Entities
 {
     public class ClienteEntity
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
+        public int id { get; set; }
+        public string nombre { get; set; }
+        public string documento { get; set; }
+        public string telefono { get; set; }
     }
-
 }

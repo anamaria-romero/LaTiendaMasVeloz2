@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entities
 {
-    class FacturaEntity
+    public class FacturaEntity
     {
-        public int Id { get; set; }
-        public int IdCliente { get; set; }
-        public int IdEmpleado { get; set; }
-        public decimal Total { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
+        public int id { get; set; }
+        public int id_cliente { get; set; } 
+        public int id_empleado { get; set; } 
+        public decimal total { get; set; }
+        public DateTime fecha { get; set; } = DateTime.Now;
 
-        [ForeignKey("IdCliente")]
+        [ForeignKey("id_cliente")]
         public ClienteEntity Cliente { get; set; }
 
-        [ForeignKey("IdEmpleado")]
+        [ForeignKey("id_empleado")]
         public UsuarioEntity Empleado { get; set; }
 
-        public ICollection<VentaEntity> Ventas { get; set; }
+        public ICollection<ProductosFactura> Productos { get; set; }
     }
 }

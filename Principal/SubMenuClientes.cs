@@ -19,22 +19,26 @@ namespace Principal
 
         private void btSubMenuRegistrarCliente_Click(object sender, EventArgs e)
         {
-
+            Cliente frmCliente = new Cliente();
+            frmCliente.Show();
         }
 
         private void btSubMenuActualizarCliente_Click(object sender, EventArgs e)
         {
-
+            ActualizarClientes frmActualizar = new ActualizarClientes();
+            frmActualizar.Show();
         }
 
         private void btSubMenuEliminarCliente_Click(object sender, EventArgs e)
         {
-
+            EliminarClientes frmEliminar = new EliminarClientes();
+            frmEliminar.Show();
         }
 
         private void btSubMenuConsultarCliente_Click(object sender, EventArgs e)
         {
-
+            ConsultarClientes frmConsultar = new ConsultarClientes();
+            frmConsultar.Show();
         }
     }
 }

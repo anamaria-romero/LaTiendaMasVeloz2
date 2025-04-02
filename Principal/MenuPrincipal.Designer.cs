@@ -31,7 +31,7 @@
             btVentas = new Button();
             btProveedores = new Button();
             btInventario = new Button();
-            btEmpleados = new Button();
+            btUsuarios = new Button();
             btClientes = new Button();
             lbTituloPagina = new Label();
             lbTituloMenu = new Label();
@@ -70,16 +70,16 @@
             btInventario.UseVisualStyleBackColor = false;
             btInventario.Click += btInventario_Click;
             // 
-            // btEmpleados
+            // btUsuarios
             // 
-            btEmpleados.BackColor = SystemColors.ActiveCaption;
-            btEmpleados.Location = new Point(269, 169);
-            btEmpleados.Name = "btEmpleados";
-            btEmpleados.Size = new Size(115, 56);
-            btEmpleados.TabIndex = 10;
-            btEmpleados.Text = "EMPLEADOS";
-            btEmpleados.UseVisualStyleBackColor = false;
-            btEmpleados.Click += btEmpleados_Click;
+            btUsuarios.BackColor = SystemColors.ActiveCaption;
+            btUsuarios.Location = new Point(269, 169);
+            btUsuarios.Name = "btUsuarios";
+            btUsuarios.Size = new Size(115, 56);
+            btUsuarios.TabIndex = 10;
+            btUsuarios.Text = "USUARIOS";
+            btUsuarios.UseVisualStyleBackColor = false;
+            btUsuarios.Click += btEmpleados_Click;
             // 
             // btClientes
             // 
@@ -116,11 +116,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(515, 450);
+            ClientSize = new Size(513, 422);
             Controls.Add(btVentas);
             Controls.Add(btProveedores);
             Controls.Add(btInventario);
-            Controls.Add(btEmpleados);
+            Controls.Add(btUsuarios);
             Controls.Add(btClientes);
             Controls.Add(lbTituloPagina);
             Controls.Add(lbTituloMenu);
@@ -135,7 +135,7 @@
         private Button btVentas;
         private Button btProveedores;
         private Button btInventario;
-        private Button btEmpleados;
+        private Button btUsuarios;
         private Button btClientes;
         private Label lbTituloPagina;
         private Label lbTituloMenu;

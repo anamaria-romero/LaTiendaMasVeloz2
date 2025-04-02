@@ -32,15 +32,17 @@
             tbDocumento = new TextBox();
             tbActualizarNombre = new TextBox();
             tbActualizarTelefono = new TextBox();
-            tbActualizarContraseña = new TextBox();
             btActualizar = new Button();
+            label1 = new Label();
+            lbClienteActualizado = new Label();
+            btBuscarCliente = new Button();
             SuspendLayout();
             // 
             // lbTituloActualizarCliente
             // 
             lbTituloActualizarCliente.AutoSize = true;
             lbTituloActualizarCliente.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloActualizarCliente.Location = new Point(75, 41);
+            lbTituloActualizarCliente.Location = new Point(113, 27);
             lbTituloActualizarCliente.Name = "lbTituloActualizarCliente";
             lbTituloActualizarCliente.Size = new Size(321, 32);
             lbTituloActualizarCliente.TabIndex = 0;
@@ -48,16 +50,15 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(113, 108);
+            tbDocumento.Location = new Point(12, 108);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(241, 23);
             tbDocumento.TabIndex = 1;
             tbDocumento.Text = "Ingresar Documento";
-            tbDocumento.TextChanged += tbDocumento_TextChanged;
             // 
             // tbActualizarNombre
             // 
-            tbActualizarNombre.Location = new Point(113, 149);
+            tbActualizarNombre.Location = new Point(283, 108);
             tbActualizarNombre.Name = "tbActualizarNombre";
             tbActualizarNombre.Size = new Size(241, 23);
             tbActualizarNombre.TabIndex = 2;
@@ -66,40 +67,64 @@
             // 
             // tbActualizarTelefono
             // 
-            tbActualizarTelefono.Location = new Point(113, 194);
+            tbActualizarTelefono.Location = new Point(283, 153);
             tbActualizarTelefono.Name = "tbActualizarTelefono";
             tbActualizarTelefono.Size = new Size(241, 23);
             tbActualizarTelefono.TabIndex = 3;
             tbActualizarTelefono.Text = "Actualizar Telefono";
             tbActualizarTelefono.TextChanged += tbActualizarTelefono_TextChanged;
             // 
-            // tbActualizarContraseña
-            // 
-            tbActualizarContraseña.Location = new Point(113, 243);
-            tbActualizarContraseña.Name = "tbActualizarContraseña";
-            tbActualizarContraseña.Size = new Size(241, 23);
-            tbActualizarContraseña.TabIndex = 4;
-            tbActualizarContraseña.Text = "Actualizar Contraseña";
-            tbActualizarContraseña.TextChanged += tbActualizarContraseña_TextChanged;
-            // 
             // btActualizar
             // 
             btActualizar.BackColor = SystemColors.ActiveCaption;
-            btActualizar.Location = new Point(164, 295);
+            btActualizar.Location = new Point(334, 233);
             btActualizar.Name = "btActualizar";
-            btActualizar.Size = new Size(127, 63);
+            btActualizar.Size = new Size(124, 53);
             btActualizar.TabIndex = 5;
             btActualizar.Text = "ACTUALIZAR";
             btActualizar.UseVisualStyleBackColor = false;
             btActualizar.Click += btActualizar_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 156);
+            label1.Name = "label1";
+            label1.Size = new Size(152, 15);
+            label1.TabIndex = 6;
+            label1.Text = "Cliente que se va actualizar:";
+            label1.Click += label1_Click;
+            // 
+            // lbClienteActualizado
+            // 
+            lbClienteActualizado.AutoSize = true;
+            lbClienteActualizado.Location = new Point(283, 202);
+            lbClienteActualizado.Name = "lbClienteActualizado";
+            lbClienteActualizado.Size = new Size(110, 15);
+            lbClienteActualizado.TabIndex = 7;
+            lbClienteActualizado.Text = "Cliente actualizado:";
+            lbClienteActualizado.Click += lbClienteActualizado_Click;
+            // 
+            // btBuscarCliente
+            // 
+            btBuscarCliente.BackColor = SystemColors.ActiveCaption;
+            btBuscarCliente.Location = new Point(65, 202);
+            btBuscarCliente.Name = "btBuscarCliente";
+            btBuscarCliente.Size = new Size(115, 48);
+            btBuscarCliente.TabIndex = 8;
+            btBuscarCliente.Text = "BUSCAR";
+            btBuscarCliente.UseVisualStyleBackColor = false;
+            btBuscarCliente.Click += btBuscarCliente_Click;
+            // 
             // ActualizarClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(477, 450);
+            ClientSize = new Size(542, 310);
+            Controls.Add(btBuscarCliente);
+            Controls.Add(lbClienteActualizado);
+            Controls.Add(label1);
             Controls.Add(btActualizar);
-            Controls.Add(tbActualizarContraseña);
             Controls.Add(tbActualizarTelefono);
             Controls.Add(tbActualizarNombre);
             Controls.Add(tbDocumento);
@@ -116,7 +141,9 @@
         private TextBox tbDocumento;
         private TextBox tbActualizarNombre;
         private TextBox tbActualizarTelefono;
-        private TextBox tbActualizarContraseña;
         private Button btActualizar;
+        private Label label1;
+        private Label lbClienteActualizado;
+        private Button btBuscarCliente;
     }
 }

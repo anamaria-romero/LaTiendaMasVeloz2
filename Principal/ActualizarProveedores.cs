@@ -1,45 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace Principal
 {
     public partial class ActualizarProveedores : Form
     {
+        private ProveedorController proveedorController;
+
         public ActualizarProveedores()
         {
             InitializeComponent();
+            proveedorController = new ProveedorController();
         }
 
-        private void tbDocumento_TextChanged(object sender, EventArgs e)
+        private void btBuscarProveedor_Click(object sender, EventArgs e)
         {
+            string documento = tbDocumento.Text;
 
-        }
+            DataTable dt = proveedorController.ConsultarProveedor(documento);
 
-        private void tbActualizarNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbActualizarTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbActualizarContraseña_TextChanged(object sender, EventArgs e)
-        {
-
+            if (dt.Rows.Count > 0)
+            {
+                tbActualizarNombre.Text = dt.Rows[0]["nombre"].ToString();
+                tbActualizarTelefono.Text = dt.Rows[0]["telefono"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Proveedor no encontrado.");
+            }
         }
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
+            string documento = tbDocumento.Text;
+            string nombre = tbActualizarNombre.Text;
+            string telefono = tbActualizarTelefono.Text;
 
+            string resultado = proveedorController.ActualizarProveedor(nombre, telefono, documento);
+            lbProveedorActualizado.Text = resultado;
         }
     }
 }

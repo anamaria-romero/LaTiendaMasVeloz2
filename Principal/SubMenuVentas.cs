@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class EliminarEmpleados: Form
+    public partial class SubMenuVentas : Form
     {
-        public EliminarEmpleados()
+        public SubMenuVentas()
         {
             InitializeComponent();
+        }
+
+        private void btSubMenuRegistrarVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btSubMenuConsultarVenta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace Modelo.Entities
 {
-    class VentaEntity
+    public class ProductosFactura
     {
-        public int Id { get; set; }
-        public int IdFactura { get; set; }
-        public int IdProducto { get; set; }
-        public int Cantidad { get; set; }
-        public decimal Subtotal { get; set; }
+        public int id { get; set; }
+        public int id_factura { get; set; }
+        public int id_producto { get; set; }
+        public int cantidad { get; set; }
+        public decimal subtotal { get; set; }
 
-        [ForeignKey("IdFactura")]
+        [ForeignKey("id_factura")]
         public FacturaEntity Factura { get; set; }
 
-        [ForeignKey("IdProducto")]
+        [ForeignKey("id_producto")]
         public ProductoEntity Producto { get; set; }
     }
+
 }

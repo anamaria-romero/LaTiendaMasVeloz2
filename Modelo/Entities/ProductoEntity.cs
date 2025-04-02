@@ -10,15 +10,16 @@ namespace Modelo.Entities
 {
     public class ProductoEntity
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Marca { get; set; }
-        public int Cantidad { get; set; }
-        public decimal Precio { get; set; }
-        public int? IdProveedor { get; set; }
-        public string Referencia { get; set; }
+        public int id { get; set; }
+        public string nombre { get; set; }
+        public string marca { get; set; }
+        public int cantidad { get; set; }
+        public decimal precio { get; set; }
+        public int? id_proveedor { get; set; }
+        public string referencia { get; set; }
 
-        [ForeignKey("IdProveedor")]
-        public ProveedorEntity Proveedor { get; set; }
+        [ForeignKey("id_proveedor")]
+        public ProveedorEntity Proveedor { get; set; } 
+
     }
 }

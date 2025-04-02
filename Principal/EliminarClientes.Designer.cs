@@ -51,7 +51,6 @@
             tbDocumento.Size = new Size(287, 23);
             tbDocumento.TabIndex = 1;
             tbDocumento.Text = "Ingresa el documento";
-            tbDocumento.TextChanged += tbDocumento_TextChanged;
             // 
             // lbMostrarCliente
             // 
@@ -61,7 +60,6 @@
             lbMostrarCliente.Size = new Size(47, 15);
             lbMostrarCliente.TabIndex = 2;
             lbMostrarCliente.Text = "Cliente:";
-            lbMostrarCliente.Click += lbMostrarCliente_Click;
             // 
             // btEliminarCliente
             // 

@@ -1,58 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
 
 namespace Principal
 {
     public partial class Producto : Form
     {
+        private ProductoController productoController;
+
         public Producto()
         {
             InitializeComponent();
-        }
-
-        private void Producto_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbNombreProducto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbReferenciaProducto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbMarcaProducto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbCantidadProducto_TextChanged(object sender, EventArgs e)
-        {
-
+            productoController = new ProductoController();
         }
 
         private void btRegistrarProducto_Click(object sender, EventArgs e)
         {
+            string nombre = tbNombreProducto.Text.Trim();
+            string marca = tbMarcaProducto.Text.Trim();
+            int cantidad = int.TryParse(tbCantidadProducto.Text.Trim(), out int cantidadVal) ? cantidadVal : 0;
+            decimal precio = decimal.TryParse(tbPrecioProducto.Text.Trim(), out decimal precioVal) ? precioVal : 0m;
+            string referencia = tbReferenciaProducto.Text.Trim();
+            int? idProveedor = int.TryParse(tbIngreseProveedor.Text.Trim(), out int idProveedorVal) ? idProveedorVal : (int?)null;
 
+            if (string.IsNullOrEmpty(nombre) || cantidad <= 0 || precio <= 0 || string.IsNullOrEmpty(referencia))
+            {
+                MessageBox.Show("Por favor, complete todos los campos correctamente.");
+                return;
+            }
+
+            try
+            {
+                productoController.CrearProducto(nombre, marca, cantidad, precio, idProveedor, referencia);
+                MessageBox.Show("Producto registrado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar el producto: " + ex.Message);
+            }
         }
 
-        private void tbIdentificadorProducto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbPrecioProducto_TextChanged(object sender, EventArgs e)
+        private void tbReferenciaProducto_TextChanged(object sender, EventArgs e)
         {
 
         }

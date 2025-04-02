@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class Factura : Form
+    public partial class Fecha : Form
     {
-        public Factura()
+        public Fecha()
         {
             InitializeComponent();
         }
 
-        private void Factura_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

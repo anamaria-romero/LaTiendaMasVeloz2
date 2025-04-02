@@ -52,7 +52,6 @@
             tbDocumentoProveedor.Size = new Size(277, 23);
             tbDocumentoProveedor.TabIndex = 1;
             tbDocumentoProveedor.Text = "Ingrese el documento";
-            tbDocumentoProveedor.TextChanged += tbDocumentoProveedor_TextChanged;
             // 
             // tbNombreProveedor
             // 
@@ -61,7 +60,6 @@
             tbNombreProveedor.Size = new Size(277, 23);
             tbNombreProveedor.TabIndex = 2;
             tbNombreProveedor.Text = "Ingrese el nombre";
-            tbNombreProveedor.TextChanged += tbNombreProveedor_TextChanged;
             // 
             // tbTelefonoProveedor
             // 
@@ -70,7 +68,6 @@
             tbTelefonoProveedor.Size = new Size(277, 23);
             tbTelefonoProveedor.TabIndex = 3;
             tbTelefonoProveedor.Text = "Ingrese el telefono";
-            tbTelefonoProveedor.TextChanged += tbTelefonoProveedor_TextChanged;
             // 
             // btIngresarProveedor
             // 

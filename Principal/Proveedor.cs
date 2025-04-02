@@ -1,40 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Principal
+﻿namespace Principal
 {
     public partial class Proveedor : Form
     {
+        private Logica.ProveedorController proveedorController;
+
         public Proveedor()
         {
             InitializeComponent();
-        }
-
-        private void tbDocumentoProveedor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbNombreProveedor_TextChanged(object sender, EventArgs e)
-        {
-
+            proveedorController = new Logica.ProveedorController();
         }
 
         private void btIngresarProveedor_Click(object sender, EventArgs e)
         {
+            string nombre = tbNombreProveedor.Text.Trim();
+            string telefono = tbTelefonoProveedor.Text.Trim();
+            string documento = tbDocumentoProveedor.Text.Trim();  // Agregado para el documento
 
-        }
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(telefono) || string.IsNullOrEmpty(documento))
+            {
+                MessageBox.Show("Por favor ingrese todos los campos.");
+                return;
+            }
 
-        private void tbTelefonoProveedor_TextChanged(object sender, EventArgs e)
-        {
-
+            proveedorController.CrearProveedor(nombre, telefono, documento);
+            MessageBox.Show("Proveedor ingresado correctamente.");
         }
     }
 }

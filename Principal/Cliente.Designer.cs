@@ -52,7 +52,6 @@
             tbNombreCliente.Size = new Size(291, 23);
             tbNombreCliente.TabIndex = 1;
             tbNombreCliente.Text = "Ingrese el nombre";
-            tbNombreCliente.TextChanged += tbNombreCliente_TextChanged;
             // 
             // tbTelefonoCliente
             // 
@@ -61,7 +60,6 @@
             tbTelefonoCliente.Size = new Size(291, 23);
             tbTelefonoCliente.TabIndex = 2;
             tbTelefonoCliente.Text = "Ingrese el telefono";
-            tbTelefonoCliente.TextChanged += tbTelefonoCliente_TextChanged;
             // 
             // tbDocumentoCliente
             // 
@@ -70,7 +68,6 @@
             tbDocumentoCliente.Size = new Size(291, 23);
             tbDocumentoCliente.TabIndex = 3;
             tbDocumentoCliente.Text = "Ingrese el documento";
-            tbDocumentoCliente.TextChanged += tbDocumentoCliente_TextChanged;
             // 
             // btIngresarCliente
             // 

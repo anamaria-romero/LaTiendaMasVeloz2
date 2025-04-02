@@ -1,38 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
-namespace Modelo
+public class ConexionMySql
 {
-    public class ConexionMySql
+    private string cadenaConexion;
+
+    public ConexionMySql()
     {
-        public MySqlConnection connection;
-        private string cadenaConexion;
+        cadenaConexion = "Database=LaTiendaMasVeloz;Datasource=localhost;User Id=root;Password=;";
+    }
 
-        public ConexionMySql()
+    public MySqlConnection GetConnection()
+    {
+        MySqlConnection connection = new MySqlConnection(cadenaConexion); 
+        try
         {
-            cadenaConexion = "Database=LaTiendaMasVeloz;Datasource=localhost;User Id=root;Password=";
-            connection = new MySqlConnection(cadenaConexion);
+            if (connection.State != System.Data.ConnectionState.Open)
+            {
+                connection.Open(); 
+            }
+        }
+        catch (MySqlException ex)
+        {
+            Console.WriteLine("Error al abrir la conexión: " + ex.Message);
+            throw;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al abrir la conexión: " + ex.Message);
+            throw;
         }
 
-        public MySqlConnection GetConnection()
-        {
-            try
-            {
-                if (connection.State != System.Data.ConnectionState.Open)
-                {
-                    connection.Open();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            return connection;
-        }
+        return connection;
     }
 }

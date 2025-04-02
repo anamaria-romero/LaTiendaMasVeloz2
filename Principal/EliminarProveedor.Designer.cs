@@ -53,7 +53,6 @@
             lbMostrarProveedor.Size = new Size(64, 15);
             lbMostrarProveedor.TabIndex = 6;
             lbMostrarProveedor.Text = "Proveedor:";
-            lbMostrarProveedor.Click += lbMostrarProveedor_Click;
             // 
             // tbDocumento
             // 
@@ -62,7 +61,6 @@
             tbDocumento.Size = new Size(287, 23);
             tbDocumento.TabIndex = 5;
             tbDocumento.Text = "Ingresa el documento";
-            tbDocumento.TextChanged += tbDocumento_TextChanged;
             // 
             // label1
             // 

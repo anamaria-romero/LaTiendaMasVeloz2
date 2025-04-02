@@ -38,7 +38,7 @@
             // 
             lbTituloConsultarCliente.AutoSize = true;
             lbTituloConsultarCliente.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloConsultarCliente.Location = new Point(113, 74);
+            lbTituloConsultarCliente.Location = new Point(87, 48);
             lbTituloConsultarCliente.Name = "lbTituloConsultarCliente";
             lbTituloConsultarCliente.Size = new Size(311, 32);
             lbTituloConsultarCliente.TabIndex = 6;
@@ -46,17 +46,16 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(151, 148);
+            tbDocumento.Location = new Point(125, 122);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(241, 23);
             tbDocumento.TabIndex = 7;
             tbDocumento.Text = "Ingresar Documento";
-            tbDocumento.TextChanged += tbDocumento_TextChanged;
             // 
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(204, 241);
+            btConsultar.Location = new Point(178, 215);
             btConsultar.Name = "btConsultar";
             btConsultar.Size = new Size(127, 63);
             btConsultar.TabIndex = 11;
@@ -67,7 +66,7 @@
             // lbMostrarCliente
             // 
             lbMostrarCliente.AutoSize = true;
-            lbMostrarCliente.Location = new Point(151, 198);
+            lbMostrarCliente.Location = new Point(125, 172);
             lbMostrarCliente.Name = "lbMostrarCliente";
             lbMostrarCliente.Size = new Size(47, 15);
             lbMostrarCliente.TabIndex = 12;
@@ -78,7 +77,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(547, 450);
+            ClientSize = new Size(497, 350);
             Controls.Add(lbMostrarCliente);
             Controls.Add(btConsultar);
             Controls.Add(tbDocumento);
