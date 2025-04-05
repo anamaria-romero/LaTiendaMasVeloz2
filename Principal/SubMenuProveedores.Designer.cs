@@ -38,7 +38,7 @@
             // btSubMenuEliminarProveedores
             // 
             btSubMenuEliminarProveedores.BackColor = SystemColors.ActiveCaption;
-            btSubMenuEliminarProveedores.Location = new Point(216, 203);
+            btSubMenuEliminarProveedores.Location = new Point(206, 176);
             btSubMenuEliminarProveedores.Name = "btSubMenuEliminarProveedores";
             btSubMenuEliminarProveedores.Size = new Size(116, 53);
             btSubMenuEliminarProveedores.TabIndex = 14;
@@ -49,7 +49,7 @@
             // btSubMenuConsultarProveedores
             // 
             btSubMenuConsultarProveedores.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarProveedores.Location = new Point(74, 203);
+            btSubMenuConsultarProveedores.Location = new Point(64, 176);
             btSubMenuConsultarProveedores.Name = "btSubMenuConsultarProveedores";
             btSubMenuConsultarProveedores.Size = new Size(116, 53);
             btSubMenuConsultarProveedores.TabIndex = 13;
@@ -60,7 +60,7 @@
             // btSubMenuActualizarProveedores
             // 
             btSubMenuActualizarProveedores.BackColor = SystemColors.ActiveCaption;
-            btSubMenuActualizarProveedores.Location = new Point(216, 118);
+            btSubMenuActualizarProveedores.Location = new Point(206, 91);
             btSubMenuActualizarProveedores.Name = "btSubMenuActualizarProveedores";
             btSubMenuActualizarProveedores.Size = new Size(116, 53);
             btSubMenuActualizarProveedores.TabIndex = 12;
@@ -71,7 +71,7 @@
             // btSubMenuRegistrarProveedores
             // 
             btSubMenuRegistrarProveedores.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarProveedores.Location = new Point(74, 118);
+            btSubMenuRegistrarProveedores.Location = new Point(64, 91);
             btSubMenuRegistrarProveedores.Name = "btSubMenuRegistrarProveedores";
             btSubMenuRegistrarProveedores.Size = new Size(116, 53);
             btSubMenuRegistrarProveedores.TabIndex = 11;
@@ -84,7 +84,7 @@
             lbTituloSubMenuProveedores.AutoSize = true;
             lbTituloSubMenuProveedores.BackColor = Color.Snow;
             lbTituloSubMenuProveedores.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuProveedores.Location = new Point(40, 48);
+            lbTituloSubMenuProveedores.Location = new Point(23, 31);
             lbTituloSubMenuProveedores.Name = "lbTituloSubMenuProveedores";
             lbTituloSubMenuProveedores.Size = new Size(350, 32);
             lbTituloSubMenuProveedores.TabIndex = 10;
@@ -94,7 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(418, 358);
+            ClientSize = new Size(391, 264);
             Controls.Add(btSubMenuEliminarProveedores);
             Controls.Add(btSubMenuConsultarProveedores);
             Controls.Add(btSubMenuActualizarProveedores);

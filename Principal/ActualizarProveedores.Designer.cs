@@ -40,9 +40,9 @@
             // btActualizar
             // 
             btActualizar.BackColor = SystemColors.ActiveCaption;
-            btActualizar.Location = new Point(336, 221);
+            btActualizar.Location = new Point(293, 232);
             btActualizar.Name = "btActualizar";
-            btActualizar.Size = new Size(127, 63);
+            btActualizar.Size = new Size(127, 48);
             btActualizar.TabIndex = 11;
             btActualizar.Text = "ACTUALIZAR";
             btActualizar.UseVisualStyleBackColor = false;
@@ -50,25 +50,25 @@
             // 
             // tbActualizarTelefono
             // 
-            tbActualizarTelefono.Location = new Point(292, 134);
+            tbActualizarTelefono.Location = new Point(251, 134);
             tbActualizarTelefono.Name = "tbActualizarTelefono";
-            tbActualizarTelefono.Size = new Size(241, 23);
+            tbActualizarTelefono.Size = new Size(212, 23);
             tbActualizarTelefono.TabIndex = 9;
             tbActualizarTelefono.Text = "Actualizar Telefono";
             // 
             // tbActualizarNombre
             // 
-            tbActualizarNombre.Location = new Point(292, 89);
+            tbActualizarNombre.Location = new Point(251, 90);
             tbActualizarNombre.Name = "tbActualizarNombre";
-            tbActualizarNombre.Size = new Size(241, 23);
+            tbActualizarNombre.Size = new Size(212, 23);
             tbActualizarNombre.TabIndex = 8;
             tbActualizarNombre.Text = "Actualizar Nombre";
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(28, 90);
+            tbDocumento.Location = new Point(17, 90);
             tbDocumento.Name = "tbDocumento";
-            tbDocumento.Size = new Size(241, 23);
+            tbDocumento.Size = new Size(212, 23);
             tbDocumento.TabIndex = 7;
             tbDocumento.Text = "Ingresar Documento";
             // 
@@ -76,7 +76,7 @@
             // 
             lbTituloActualizarProveedores.AutoSize = true;
             lbTituloActualizarProveedores.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloActualizarProveedores.Location = new Point(75, 26);
+            lbTituloActualizarProveedores.Location = new Point(51, 25);
             lbTituloActualizarProveedores.Name = "lbTituloActualizarProveedores";
             lbTituloActualizarProveedores.Size = new Size(388, 32);
             lbTituloActualizarProveedores.TabIndex = 6;
@@ -85,16 +85,17 @@
             // lbProveedorActualizado
             // 
             lbProveedorActualizado.AutoSize = true;
-            lbProveedorActualizado.Location = new Point(292, 183);
+            lbProveedorActualizado.Location = new Point(251, 183);
             lbProveedorActualizado.Name = "lbProveedorActualizado";
             lbProveedorActualizado.Size = new Size(129, 15);
             lbProveedorActualizado.TabIndex = 13;
             lbProveedorActualizado.Text = "Proveedor Actualizado:";
+            lbProveedorActualizado.Click += lbProveedorActualizado_Click;
             // 
             // btBuscarProveedor
             // 
             btBuscarProveedor.BackColor = SystemColors.ActiveCaption;
-            btBuscarProveedor.Location = new Point(75, 169);
+            btBuscarProveedor.Location = new Point(51, 134);
             btBuscarProveedor.Name = "btBuscarProveedor";
             btBuscarProveedor.Size = new Size(117, 42);
             btBuscarProveedor.TabIndex = 14;
@@ -106,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(548, 327);
+            ClientSize = new Size(512, 292);
             Controls.Add(btBuscarProveedor);
             Controls.Add(lbProveedorActualizado);
             Controls.Add(btActualizar);

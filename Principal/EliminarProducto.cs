@@ -26,13 +26,31 @@ namespace Principal
 
             try
             {
+                var producto = productoController.ConsultarProducto(id);
+
+                if (producto == null)
+                {
+                    MessageBox.Show("Producto no encontrado.");
+                    lbMostrarProducto.Text = "";
+                    return;
+                }
+
                 productoController.EliminarProducto(id);
+
+                lbMostrarProducto.Text = $"Producto eliminado: {producto.nombre},\n Marca: {producto.marca},\n Referencia: {producto.referencia}";
+
                 MessageBox.Show("Producto eliminado correctamente.");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar el producto: " + ex.Message);
             }
+        }
+
+
+        private void lbMostrarProducto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

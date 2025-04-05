@@ -37,7 +37,7 @@
             // lbMostrarProveedor
             // 
             lbMostrarProveedor.AutoSize = true;
-            lbMostrarProveedor.Location = new Point(106, 171);
+            lbMostrarProveedor.Location = new Point(71, 118);
             lbMostrarProveedor.Name = "lbMostrarProveedor";
             lbMostrarProveedor.Size = new Size(64, 15);
             lbMostrarProveedor.TabIndex = 16;
@@ -46,9 +46,9 @@
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(159, 214);
+            btConsultar.Location = new Point(126, 181);
             btConsultar.Name = "btConsultar";
-            btConsultar.Size = new Size(127, 63);
+            btConsultar.Size = new Size(127, 49);
             btConsultar.TabIndex = 15;
             btConsultar.Text = "CONSULTAR";
             btConsultar.UseVisualStyleBackColor = false;
@@ -56,7 +56,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(106, 121);
+            tbDocumento.Location = new Point(71, 76);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(241, 23);
             tbDocumento.TabIndex = 14;
@@ -66,7 +66,7 @@
             // 
             lbTituloConsultarProveedor.AutoSize = true;
             lbTituloConsultarProveedor.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloConsultarProveedor.Location = new Point(68, 47);
+            lbTituloConsultarProveedor.Location = new Point(25, 24);
             lbTituloConsultarProveedor.Name = "lbTituloConsultarProveedor";
             lbTituloConsultarProveedor.Size = new Size(345, 32);
             lbTituloConsultarProveedor.TabIndex = 13;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 367);
+            ClientSize = new Size(391, 245);
             Controls.Add(lbMostrarProveedor);
             Controls.Add(btConsultar);
             Controls.Add(tbDocumento);

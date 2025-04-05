@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -16,12 +16,18 @@ namespace Principal
 
         private void btConsultar_Click(object sender, EventArgs e)
         {
-            string documento = tbDocumentoUsuario.Text;
-
-            DataTable dt = usuarioController.ConsultarUsuario(documento);
-            if (dt.Rows.Count > 0)
+            string documento = tbDocumentoUsuario.Text.Trim();
+            if (string.IsNullOrEmpty(documento))
             {
-                lbMostrarUsuario.Text = $"Nombre: {dt.Rows[0]["nombre"]}\nRol: {dt.Rows[0]["rol"]}";
+                MessageBox.Show("Por favor, ingrese un documento válido.");
+                return;
+            }
+
+            UsuarioEntity usuario = usuarioController.ConsultarUsuario(documento);
+
+            if (usuario != null)
+            {
+                lbMostrarUsuario.Text =  $"Nombre: {usuario.nombre}\nRol: {usuario.rol}\nContraseña: {usuario.contraseña}";
             }
             else
             {

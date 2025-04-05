@@ -37,7 +37,7 @@
             // lbMostrarUsuario
             // 
             lbMostrarUsuario.AutoSize = true;
-            lbMostrarUsuario.Location = new Point(81, 158);
+            lbMostrarUsuario.Location = new Point(64, 120);
             lbMostrarUsuario.Name = "lbMostrarUsuario";
             lbMostrarUsuario.Size = new Size(50, 15);
             lbMostrarUsuario.TabIndex = 20;
@@ -46,9 +46,9 @@
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(134, 201);
+            btConsultar.Location = new Point(117, 195);
             btConsultar.Name = "btConsultar";
-            btConsultar.Size = new Size(127, 63);
+            btConsultar.Size = new Size(127, 51);
             btConsultar.TabIndex = 19;
             btConsultar.Text = "CONSULTAR";
             btConsultar.UseVisualStyleBackColor = false;
@@ -56,7 +56,7 @@
             // 
             // tbDocumentoUsuario
             // 
-            tbDocumentoUsuario.Location = new Point(81, 108);
+            tbDocumentoUsuario.Location = new Point(64, 78);
             tbDocumentoUsuario.Name = "tbDocumentoUsuario";
             tbDocumentoUsuario.Size = new Size(241, 23);
             tbDocumentoUsuario.TabIndex = 18;
@@ -66,7 +66,7 @@
             // 
             lbTituloConsultarUsuario.AutoSize = true;
             lbTituloConsultarUsuario.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloConsultarUsuario.Location = new Point(47, 37);
+            lbTituloConsultarUsuario.Location = new Point(28, 26);
             lbTituloConsultarUsuario.Name = "lbTituloConsultarUsuario";
             lbTituloConsultarUsuario.Size = new Size(303, 32);
             lbTituloConsultarUsuario.TabIndex = 17;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(413, 320);
+            ClientSize = new Size(363, 264);
             Controls.Add(lbMostrarUsuario);
             Controls.Add(btConsultar);
             Controls.Add(tbDocumentoUsuario);

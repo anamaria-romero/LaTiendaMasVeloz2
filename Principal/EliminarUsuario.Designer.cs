@@ -31,12 +31,13 @@
             btEliminarCliente = new Button();
             tbDocumento = new TextBox();
             lbEliminarUsuario = new Label();
+            lbUsuarioEliminado = new Label();
             SuspendLayout();
             // 
             // btEliminarCliente
             // 
             btEliminarCliente.BackColor = SystemColors.ActiveCaption;
-            btEliminarCliente.Location = new Point(125, 210);
+            btEliminarCliente.Location = new Point(109, 186);
             btEliminarCliente.Name = "btEliminarCliente";
             btEliminarCliente.Size = new Size(153, 60);
             btEliminarCliente.TabIndex = 7;
@@ -46,9 +47,9 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(65, 141);
+            tbDocumento.Location = new Point(49, 76);
             tbDocumento.Name = "tbDocumento";
-            tbDocumento.Size = new Size(287, 23);
+            tbDocumento.Size = new Size(279, 23);
             tbDocumento.TabIndex = 5;
             tbDocumento.Text = "Ingresa el documento";
             // 
@@ -56,17 +57,28 @@
             // 
             lbEliminarUsuario.AutoSize = true;
             lbEliminarUsuario.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbEliminarUsuario.Location = new Point(65, 72);
+            lbEliminarUsuario.Location = new Point(49, 21);
             lbEliminarUsuario.Name = "lbEliminarUsuario";
             lbEliminarUsuario.Size = new Size(279, 32);
             lbEliminarUsuario.TabIndex = 4;
             lbEliminarUsuario.Text = "Eliminar Usuario";
             // 
+            // lbUsuarioEliminado
+            // 
+            lbUsuarioEliminado.AutoSize = true;
+            lbUsuarioEliminado.Location = new Point(49, 128);
+            lbUsuarioEliminado.Name = "lbUsuarioEliminado";
+            lbUsuarioEliminado.Size = new Size(106, 15);
+            lbUsuarioEliminado.TabIndex = 8;
+            lbUsuarioEliminado.Text = "Usuario eliminado:";
+            lbUsuarioEliminado.Click += lbUsuarioEliminado_Click;
+            // 
             // EliminarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(417, 316);
+            ClientSize = new Size(376, 269);
+            Controls.Add(lbUsuarioEliminado);
             Controls.Add(btEliminarCliente);
             Controls.Add(tbDocumento);
             Controls.Add(lbEliminarUsuario);
@@ -81,5 +93,6 @@
         private Button btEliminarCliente;
         private TextBox tbDocumento;
         private Label lbEliminarUsuario;
+        private Label lbUsuarioEliminado;
     }
 }

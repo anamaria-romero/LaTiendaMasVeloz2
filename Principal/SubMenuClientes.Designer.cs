@@ -40,7 +40,7 @@
             lbTituloSubMenuClientes.AutoSize = true;
             lbTituloSubMenuClientes.BackColor = Color.Snow;
             lbTituloSubMenuClientes.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuClientes.Location = new Point(80, 64);
+            lbTituloSubMenuClientes.Location = new Point(33, 30);
             lbTituloSubMenuClientes.Name = "lbTituloSubMenuClientes";
             lbTituloSubMenuClientes.Size = new Size(283, 32);
             lbTituloSubMenuClientes.TabIndex = 0;
@@ -49,7 +49,7 @@
             // btSubMenuRegistrarCliente
             // 
             btSubMenuRegistrarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarCliente.Location = new Point(93, 131);
+            btSubMenuRegistrarCliente.Location = new Point(45, 86);
             btSubMenuRegistrarCliente.Name = "btSubMenuRegistrarCliente";
             btSubMenuRegistrarCliente.Size = new Size(116, 53);
             btSubMenuRegistrarCliente.TabIndex = 1;
@@ -60,7 +60,7 @@
             // btSubMenuActualizarCliente
             // 
             btSubMenuActualizarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuActualizarCliente.Location = new Point(235, 131);
+            btSubMenuActualizarCliente.Location = new Point(200, 86);
             btSubMenuActualizarCliente.Name = "btSubMenuActualizarCliente";
             btSubMenuActualizarCliente.Size = new Size(116, 53);
             btSubMenuActualizarCliente.TabIndex = 2;
@@ -71,7 +71,7 @@
             // btSubMenuConsultarCliente
             // 
             btSubMenuConsultarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarCliente.Location = new Point(93, 216);
+            btSubMenuConsultarCliente.Location = new Point(45, 171);
             btSubMenuConsultarCliente.Name = "btSubMenuConsultarCliente";
             btSubMenuConsultarCliente.Size = new Size(116, 53);
             btSubMenuConsultarCliente.TabIndex = 3;
@@ -82,7 +82,7 @@
             // btSubMenuEliminarCliente
             // 
             btSubMenuEliminarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuEliminarCliente.Location = new Point(235, 216);
+            btSubMenuEliminarCliente.Location = new Point(200, 171);
             btSubMenuEliminarCliente.Name = "btSubMenuEliminarCliente";
             btSubMenuEliminarCliente.Size = new Size(116, 53);
             btSubMenuEliminarCliente.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(469, 332);
+            ClientSize = new Size(360, 260);
             Controls.Add(btSubMenuEliminarCliente);
             Controls.Add(btSubMenuConsultarCliente);
             Controls.Add(btSubMenuActualizarCliente);

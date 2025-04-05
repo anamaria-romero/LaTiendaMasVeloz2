@@ -16,11 +16,14 @@ namespace Principal
         {
             string nombre = tbNombreCliente.Text;
             string telefono = tbTelefonoCliente.Text;
-            string documento = tbDocumentoCliente.Text; 
+            string documento = tbDocumentoCliente.Text;
 
-            string mensaje = clienteController.RegistrarCliente(nombre, telefono, documento);
+            string mensaje = clienteController.GuardarCliente(documento, nombre, telefono);
 
             MessageBox.Show(mensaje);
+
+            lbClienteIngresado.Text = $"Cliente: {nombre}, Teléfono: {telefono}, Documento: {documento}";
         }
+
     }
 }

@@ -36,5 +36,10 @@ namespace Principal
         {
 
         }
+
+        private void IniciarSesion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

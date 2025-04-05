@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -19,12 +19,12 @@ namespace Principal
         {
             string documento = tbDocumento.Text;
 
-            DataTable dt = proveedorController.ConsultarProveedor(documento);
+            ProveedorEntity proveedor = proveedorController.ConsultarProveedor(documento);
 
-            if (dt.Rows.Count > 0)
+            if (proveedor != null)
             {
-                tbActualizarNombre.Text = dt.Rows[0]["nombre"].ToString();
-                tbActualizarTelefono.Text = dt.Rows[0]["telefono"].ToString();
+                tbActualizarNombre.Text = proveedor.nombre;
+                tbActualizarTelefono.Text = proveedor.telefono;
             }
             else
             {
@@ -34,12 +34,29 @@ namespace Principal
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
-            string documento = tbDocumento.Text;
-            string nombre = tbActualizarNombre.Text;
-            string telefono = tbActualizarTelefono.Text;
+            ProveedorEntity proveedor = new ProveedorEntity
+            {
+                documento = tbDocumento.Text,
+                nombre = tbActualizarNombre.Text,
+                telefono = tbActualizarTelefono.Text
+            };
 
-            string resultado = proveedorController.ActualizarProveedor(nombre, telefono, documento);
-            lbProveedorActualizado.Text = resultado;
+            bool actualizado = proveedorController.ActualizarProveedor(proveedor);
+
+            if (actualizado)
+            {
+                lbProveedorActualizado.Text = $"Proveedor actualizado: {proveedor.nombre},\n Teléfono: {proveedor.telefono}, Documento: {proveedor.documento}";
+            }
+            else
+            {
+                lbProveedorActualizado.Text = "No se pudo actualizar el proveedor.";
+            }
+
+        }
+
+        private void lbProveedorActualizado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

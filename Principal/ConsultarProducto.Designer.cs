@@ -37,7 +37,7 @@
             // lbMostrarProducto
             // 
             lbMostrarProducto.AutoSize = true;
-            lbMostrarProducto.Location = new Point(100, 180);
+            lbMostrarProducto.Location = new Point(62, 121);
             lbMostrarProducto.Name = "lbMostrarProducto";
             lbMostrarProducto.Size = new Size(59, 15);
             lbMostrarProducto.TabIndex = 16;
@@ -46,9 +46,9 @@
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(149, 267);
+            btConsultar.Location = new Point(119, 201);
             btConsultar.Name = "btConsultar";
-            btConsultar.Size = new Size(127, 63);
+            btConsultar.Size = new Size(127, 46);
             btConsultar.TabIndex = 15;
             btConsultar.Text = "CONSULTAR";
             btConsultar.UseVisualStyleBackColor = false;
@@ -56,7 +56,7 @@
             // 
             // tbIdentificador
             // 
-            tbIdentificador.Location = new Point(100, 130);
+            tbIdentificador.Location = new Point(62, 76);
             tbIdentificador.Name = "tbIdentificador";
             tbIdentificador.Size = new Size(241, 23);
             tbIdentificador.TabIndex = 14;
@@ -66,7 +66,7 @@
             // 
             lbTituloConsultarProductos.AutoSize = true;
             lbTituloConsultarProductos.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloConsultarProductos.Location = new Point(51, 57);
+            lbTituloConsultarProductos.Location = new Point(14, 25);
             lbTituloConsultarProductos.Name = "lbTituloConsultarProductos";
             lbTituloConsultarProductos.Size = new Size(343, 32);
             lbTituloConsultarProductos.TabIndex = 13;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(435, 342);
+            ClientSize = new Size(371, 258);
             Controls.Add(lbMostrarProducto);
             Controls.Add(btConsultar);
             Controls.Add(tbIdentificador);

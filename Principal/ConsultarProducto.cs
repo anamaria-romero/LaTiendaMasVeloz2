@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities; 
 
 namespace Principal
 {
@@ -24,8 +25,7 @@ namespace Principal
                 return;
             }
 
-            var productos = productoController.ObtenerProductos();
-            var producto = productos.Find(p => p.id == id);
+            ProductoEntity producto = productoController.ConsultarProducto(id);
 
             if (producto != null)
             {

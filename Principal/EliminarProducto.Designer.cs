@@ -37,9 +37,9 @@
             // btEliminarProducto
             // 
             btEliminarProducto.BackColor = SystemColors.ActiveCaption;
-            btEliminarProducto.Location = new Point(125, 216);
+            btEliminarProducto.Location = new Point(108, 180);
             btEliminarProducto.Name = "btEliminarProducto";
-            btEliminarProducto.Size = new Size(153, 60);
+            btEliminarProducto.Size = new Size(141, 50);
             btEliminarProducto.TabIndex = 7;
             btEliminarProducto.Text = "ELIMINAR";
             btEliminarProducto.UseVisualStyleBackColor = false;
@@ -48,17 +48,18 @@
             // lbMostrarProducto
             // 
             lbMostrarProducto.AutoSize = true;
-            lbMostrarProducto.Location = new Point(65, 159);
+            lbMostrarProducto.Location = new Point(40, 121);
             lbMostrarProducto.Name = "lbMostrarProducto";
             lbMostrarProducto.Size = new Size(59, 15);
             lbMostrarProducto.TabIndex = 6;
             lbMostrarProducto.Text = "Producto:";
+            lbMostrarProducto.Click += lbMostrarProducto_Click;
             // 
             // tbIdentificador
             // 
-            tbIdentificador.Location = new Point(65, 107);
+            tbIdentificador.Location = new Point(40, 79);
             tbIdentificador.Name = "tbIdentificador";
-            tbIdentificador.Size = new Size(287, 23);
+            tbIdentificador.Size = new Size(286, 23);
             tbIdentificador.TabIndex = 5;
             tbIdentificador.Text = "Ingresa el identificador";
             // 
@@ -66,7 +67,7 @@
             // 
             lbEliminarProductos.AutoSize = true;
             lbEliminarProductos.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbEliminarProductos.Location = new Point(65, 38);
+            lbEliminarProductos.Location = new Point(27, 27);
             lbEliminarProductos.Name = "lbEliminarProductos";
             lbEliminarProductos.Size = new Size(319, 32);
             lbEliminarProductos.TabIndex = 4;
@@ -76,7 +77,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(429, 340);
+            ClientSize = new Size(366, 245);
             Controls.Add(btEliminarProducto);
             Controls.Add(lbMostrarProducto);
             Controls.Add(tbIdentificador);

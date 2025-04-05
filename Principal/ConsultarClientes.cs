@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica;  
+using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -31,14 +25,11 @@ namespace Principal
                 return;
             }
 
-            DataTable clienteData = clienteController.ConsultarCliente(documento);
+            ClienteEntity cliente = clienteController.ConsultarCliente(documento);
 
-            if (clienteData.Rows.Count > 0)
+            if (cliente != null)
             {
-                string nombre = clienteData.Rows[0]["nombre"].ToString();
-                string telefono = clienteData.Rows[0]["telefono"].ToString();
-
-                lbMostrarCliente.Text = $"Nombre: {nombre}\nTeléfono: {telefono}";
+                lbMostrarCliente.Text = $"Nombre: {cliente.nombre}\nTeléfono: {cliente.telefono}";
             }
             else
             {
@@ -46,14 +37,8 @@ namespace Principal
             }
         }
 
-        private void ConsultarClientes_Load(object sender, EventArgs e)
-        {
+        private void ConsultarClientes_Load(object sender, EventArgs e) { }
 
-        }
-
-        private void lbMostrarCliente_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lbMostrarCliente_Click(object sender, EventArgs e) { }
     }
 }

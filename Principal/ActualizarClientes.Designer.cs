@@ -42,7 +42,7 @@
             // 
             lbTituloActualizarCliente.AutoSize = true;
             lbTituloActualizarCliente.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloActualizarCliente.Location = new Point(113, 27);
+            lbTituloActualizarCliente.Location = new Point(117, 23);
             lbTituloActualizarCliente.Name = "lbTituloActualizarCliente";
             lbTituloActualizarCliente.Size = new Size(321, 32);
             lbTituloActualizarCliente.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(12, 108);
+            tbDocumento.Location = new Point(17, 73);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(241, 23);
             tbDocumento.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // tbActualizarNombre
             // 
-            tbActualizarNombre.Location = new Point(283, 108);
+            tbActualizarNombre.Location = new Point(295, 73);
             tbActualizarNombre.Name = "tbActualizarNombre";
             tbActualizarNombre.Size = new Size(241, 23);
             tbActualizarNombre.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // tbActualizarTelefono
             // 
-            tbActualizarTelefono.Location = new Point(283, 153);
+            tbActualizarTelefono.Location = new Point(295, 118);
             tbActualizarTelefono.Name = "tbActualizarTelefono";
             tbActualizarTelefono.Size = new Size(241, 23);
             tbActualizarTelefono.TabIndex = 3;
@@ -77,9 +77,9 @@
             // btActualizar
             // 
             btActualizar.BackColor = SystemColors.ActiveCaption;
-            btActualizar.Location = new Point(334, 233);
+            btActualizar.Location = new Point(356, 211);
             btActualizar.Name = "btActualizar";
-            btActualizar.Size = new Size(124, 53);
+            btActualizar.Size = new Size(124, 40);
             btActualizar.TabIndex = 5;
             btActualizar.Text = "ACTUALIZAR";
             btActualizar.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 156);
+            label1.Location = new Point(17, 121);
             label1.Name = "label1";
             label1.Size = new Size(152, 15);
             label1.TabIndex = 6;
@@ -98,7 +98,7 @@
             // lbClienteActualizado
             // 
             lbClienteActualizado.AutoSize = true;
-            lbClienteActualizado.Location = new Point(283, 202);
+            lbClienteActualizado.Location = new Point(295, 167);
             lbClienteActualizado.Name = "lbClienteActualizado";
             lbClienteActualizado.Size = new Size(110, 15);
             lbClienteActualizado.TabIndex = 7;
@@ -108,9 +108,9 @@
             // btBuscarCliente
             // 
             btBuscarCliente.BackColor = SystemColors.ActiveCaption;
-            btBuscarCliente.Location = new Point(65, 202);
+            btBuscarCliente.Location = new Point(67, 167);
             btBuscarCliente.Name = "btBuscarCliente";
-            btBuscarCliente.Size = new Size(115, 48);
+            btBuscarCliente.Size = new Size(115, 41);
             btBuscarCliente.TabIndex = 8;
             btBuscarCliente.Text = "BUSCAR";
             btBuscarCliente.UseVisualStyleBackColor = false;
@@ -120,7 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(542, 310);
+            ClientSize = new Size(575, 263);
             Controls.Add(btBuscarCliente);
             Controls.Add(lbClienteActualizado);
             Controls.Add(label1);

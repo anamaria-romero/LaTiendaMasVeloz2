@@ -38,7 +38,7 @@
             // btSubMenuEliminarUsuario
             // 
             btSubMenuEliminarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuEliminarUsuario.Location = new Point(221, 199);
+            btSubMenuEliminarUsuario.Location = new Point(193, 177);
             btSubMenuEliminarUsuario.Name = "btSubMenuEliminarUsuario";
             btSubMenuEliminarUsuario.Size = new Size(116, 53);
             btSubMenuEliminarUsuario.TabIndex = 9;
@@ -49,7 +49,7 @@
             // btSubMenuConsultarUsuario
             // 
             btSubMenuConsultarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarUsuario.Location = new Point(79, 199);
+            btSubMenuConsultarUsuario.Location = new Point(51, 177);
             btSubMenuConsultarUsuario.Name = "btSubMenuConsultarUsuario";
             btSubMenuConsultarUsuario.Size = new Size(116, 53);
             btSubMenuConsultarUsuario.TabIndex = 8;
@@ -60,7 +60,7 @@
             // btSubMenuActualizarUsuario
             // 
             btSubMenuActualizarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuActualizarUsuario.Location = new Point(221, 114);
+            btSubMenuActualizarUsuario.Location = new Point(193, 92);
             btSubMenuActualizarUsuario.Name = "btSubMenuActualizarUsuario";
             btSubMenuActualizarUsuario.Size = new Size(116, 53);
             btSubMenuActualizarUsuario.TabIndex = 7;
@@ -71,7 +71,7 @@
             // btSubMenuRegistrarUsuario
             // 
             btSubMenuRegistrarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarUsuario.Location = new Point(79, 114);
+            btSubMenuRegistrarUsuario.Location = new Point(51, 92);
             btSubMenuRegistrarUsuario.Name = "btSubMenuRegistrarUsuario";
             btSubMenuRegistrarUsuario.Size = new Size(116, 53);
             btSubMenuRegistrarUsuario.TabIndex = 6;
@@ -84,7 +84,7 @@
             lbTituloSubMenuUsuarios.AutoSize = true;
             lbTituloSubMenuUsuarios.BackColor = Color.Snow;
             lbTituloSubMenuUsuarios.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuUsuarios.Location = new Point(66, 47);
+            lbTituloSubMenuUsuarios.Location = new Point(31, 32);
             lbTituloSubMenuUsuarios.Name = "lbTituloSubMenuUsuarios";
             lbTituloSubMenuUsuarios.Size = new Size(291, 32);
             lbTituloSubMenuUsuarios.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(419, 320);
+            ClientSize = new Size(358, 280);
             Controls.Add(btSubMenuEliminarUsuario);
             Controls.Add(btSubMenuConsultarUsuario);
             Controls.Add(btSubMenuActualizarUsuario);

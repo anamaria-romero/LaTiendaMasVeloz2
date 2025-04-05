@@ -11,25 +11,6 @@ public class ConexionMySql
 
     public MySqlConnection GetConnection()
     {
-        MySqlConnection connection = new MySqlConnection(cadenaConexion); 
-        try
-        {
-            if (connection.State != System.Data.ConnectionState.Open)
-            {
-                connection.Open(); 
-            }
-        }
-        catch (MySqlException ex)
-        {
-            Console.WriteLine("Error al abrir la conexión: " + ex.Message);
-            throw;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error al abrir la conexión: " + ex.Message);
-            throw;
-        }
-
-        return connection;
+        return new MySqlConnection(cadenaConexion);
     }
 }

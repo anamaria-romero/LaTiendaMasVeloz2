@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -25,12 +26,13 @@ namespace Principal
                 return;
             }
 
-            DataTable clienteData = clienteController.ConsultarCliente(documento);
+            ClienteEntity cliente = clienteController.ConsultarCliente(documento);
 
-            if (clienteData.Rows.Count > 0)
+            if (cliente != null)
             {
-                string nombre = clienteData.Rows[0]["nombre"].ToString();
-                string mensaje = clienteController.EliminarCliente(documento);
+                string nombre = cliente.nombre;
+
+                clienteController.EliminarCliente(documento);
 
                 lbMostrarCliente.Text = $"Cliente {nombre} eliminado correctamente.";
             }
@@ -39,5 +41,6 @@ namespace Principal
                 lbMostrarCliente.Text = "Cliente no encontrado.";
             }
         }
+
     }
 }

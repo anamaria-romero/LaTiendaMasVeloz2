@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btIngresarProveedor = new Button();
+            btIngresarUsuario = new Button();
             tbContraseñaUsuario = new TextBox();
             tbNombreUsuario = new TextBox();
             tbDocumentoUsuario = new TextBox();
             lbTituloUsuario = new Label();
             cbCargo = new ComboBox();
+            lbUsuarioRegistrado = new Label();
             SuspendLayout();
             // 
-            // btIngresarProveedor
+            // btIngresarUsuario
             // 
-            btIngresarProveedor.BackColor = SystemColors.ActiveCaption;
-            btIngresarProveedor.Location = new Point(140, 265);
-            btIngresarProveedor.Name = "btIngresarProveedor";
-            btIngresarProveedor.Size = new Size(110, 46);
-            btIngresarProveedor.TabIndex = 9;
-            btIngresarProveedor.Text = "INGRESAR";
-            btIngresarProveedor.UseVisualStyleBackColor = false;
-            btIngresarProveedor.Click += btIngresarProveedor_Click;
+            btIngresarUsuario.BackColor = SystemColors.ActiveCaption;
+            btIngresarUsuario.Location = new Point(140, 281);
+            btIngresarUsuario.Name = "btIngresarUsuario";
+            btIngresarUsuario.Size = new Size(110, 46);
+            btIngresarUsuario.TabIndex = 9;
+            btIngresarUsuario.Text = "INGRESAR";
+            btIngresarUsuario.UseVisualStyleBackColor = false;
+            btIngresarUsuario.Click += btIngresarUsuario_Click;
             // 
             // tbContraseñaUsuario
             // 
-            tbContraseñaUsuario.Location = new Point(67, 208);
+            tbContraseñaUsuario.Location = new Point(67, 195);
             tbContraseñaUsuario.Name = "tbContraseñaUsuario";
             tbContraseñaUsuario.Size = new Size(277, 23);
             tbContraseñaUsuario.TabIndex = 8;
@@ -57,7 +58,7 @@
             // 
             // tbNombreUsuario
             // 
-            tbNombreUsuario.Location = new Point(67, 117);
+            tbNombreUsuario.Location = new Point(67, 105);
             tbNombreUsuario.Name = "tbNombreUsuario";
             tbNombreUsuario.Size = new Size(277, 23);
             tbNombreUsuario.TabIndex = 7;
@@ -65,7 +66,7 @@
             // 
             // tbDocumentoUsuario
             // 
-            tbDocumentoUsuario.Location = new Point(67, 68);
+            tbDocumentoUsuario.Location = new Point(67, 61);
             tbDocumentoUsuario.Name = "tbDocumentoUsuario";
             tbDocumentoUsuario.Size = new Size(277, 23);
             tbDocumentoUsuario.TabIndex = 6;
@@ -84,19 +85,30 @@
             // cbCargo
             // 
             cbCargo.FormattingEnabled = true;
-            cbCargo.Location = new Point(67, 165);
+            cbCargo.Location = new Point(67, 151);
             cbCargo.Name = "cbCargo";
             cbCargo.Size = new Size(277, 23);
             cbCargo.TabIndex = 10;
             cbCargo.Text = "Elije el cargo";
+            // 
+            // lbUsuarioRegistrado
+            // 
+            lbUsuarioRegistrado.AutoSize = true;
+            lbUsuarioRegistrado.Location = new Point(67, 247);
+            lbUsuarioRegistrado.Name = "lbUsuarioRegistrado";
+            lbUsuarioRegistrado.Size = new Size(50, 15);
+            lbUsuarioRegistrado.TabIndex = 11;
+            lbUsuarioRegistrado.Text = "Usuario:";
+            lbUsuarioRegistrado.Click += lbUsuarioRegistrado_Click;
             // 
             // Usuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(410, 339);
+            Controls.Add(lbUsuarioRegistrado);
             Controls.Add(cbCargo);
-            Controls.Add(btIngresarProveedor);
+            Controls.Add(btIngresarUsuario);
             Controls.Add(tbContraseñaUsuario);
             Controls.Add(tbNombreUsuario);
             Controls.Add(tbDocumentoUsuario);
@@ -109,11 +121,12 @@
 
         #endregion
 
-        private Button btIngresarProveedor;
+        private Button btIngresarUsuario;
         private TextBox tbContraseñaUsuario;
         private TextBox tbNombreUsuario;
         private TextBox tbDocumentoUsuario;
         private Label lbTituloUsuario;
         private ComboBox cbCargo;
+        private Label lbUsuarioRegistrado;
     }
 }

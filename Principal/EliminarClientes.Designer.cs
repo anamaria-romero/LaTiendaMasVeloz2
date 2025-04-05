@@ -38,7 +38,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(86, 34);
+            label1.Location = new Point(40, 21);
             label1.Name = "label1";
             label1.Size = new Size(287, 32);
             label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(86, 103);
+            tbDocumento.Location = new Point(40, 78);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(287, 23);
             tbDocumento.TabIndex = 1;
@@ -55,7 +55,7 @@
             // lbMostrarCliente
             // 
             lbMostrarCliente.AutoSize = true;
-            lbMostrarCliente.Location = new Point(86, 155);
+            lbMostrarCliente.Location = new Point(40, 128);
             lbMostrarCliente.Name = "lbMostrarCliente";
             lbMostrarCliente.Size = new Size(47, 15);
             lbMostrarCliente.TabIndex = 2;
@@ -64,9 +64,9 @@
             // btEliminarCliente
             // 
             btEliminarCliente.BackColor = SystemColors.ActiveCaption;
-            btEliminarCliente.Location = new Point(146, 212);
+            btEliminarCliente.Location = new Point(112, 180);
             btEliminarCliente.Name = "btEliminarCliente";
-            btEliminarCliente.Size = new Size(153, 60);
+            btEliminarCliente.Size = new Size(136, 51);
             btEliminarCliente.TabIndex = 3;
             btEliminarCliente.Text = "ELIMINAR";
             btEliminarCliente.UseVisualStyleBackColor = false;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(463, 355);
+            ClientSize = new Size(365, 243);
             Controls.Add(btEliminarCliente);
             Controls.Add(lbMostrarCliente);
             Controls.Add(tbDocumento);

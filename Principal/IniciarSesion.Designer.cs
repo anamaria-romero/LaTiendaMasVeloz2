@@ -40,7 +40,7 @@
             lbIniciar.AutoSize = true;
             lbIniciar.BackColor = SystemColors.ButtonFace;
             lbIniciar.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbIniciar.Location = new Point(104, 67);
+            lbIniciar.Location = new Point(87, 30);
             lbIniciar.Name = "lbIniciar";
             lbIniciar.Size = new Size(230, 32);
             lbIniciar.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // tbIngresarNombre
             // 
-            tbIngresarNombre.Location = new Point(49, 118);
+            tbIngresarNombre.Location = new Point(32, 81);
             tbIngresarNombre.Name = "tbIngresarNombre";
             tbIngresarNombre.Size = new Size(349, 23);
             tbIngresarNombre.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             // tbContraseñaIniciarSesion
             // 
-            tbContraseñaIniciarSesion.Location = new Point(49, 200);
+            tbContraseñaIniciarSesion.Location = new Point(32, 163);
             tbContraseñaIniciarSesion.Name = "tbContraseñaIniciarSesion";
             tbContraseñaIniciarSesion.Size = new Size(349, 23);
             tbContraseñaIniciarSesion.TabIndex = 3;
@@ -67,7 +67,7 @@
             // tbIngresarRol
             // 
             tbIngresarRol.AllowDrop = true;
-            tbIngresarRol.Location = new Point(49, 159);
+            tbIngresarRol.Location = new Point(32, 122);
             tbIngresarRol.Name = "tbIngresarRol";
             tbIngresarRol.Size = new Size(349, 23);
             tbIngresarRol.TabIndex = 4;
@@ -77,9 +77,9 @@
             // btIngresar
             // 
             btIngresar.BackColor = SystemColors.ActiveCaption;
-            btIngresar.Location = new Point(126, 257);
+            btIngresar.Location = new Point(128, 205);
             btIngresar.Name = "btIngresar";
-            btIngresar.Size = new Size(191, 63);
+            btIngresar.Size = new Size(147, 53);
             btIngresar.TabIndex = 5;
             btIngresar.Text = "INGRESAR";
             btIngresar.UseVisualStyleBackColor = false;
@@ -89,7 +89,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(451, 377);
+            ClientSize = new Size(415, 274);
             Controls.Add(btIngresar);
             Controls.Add(tbIngresarRol);
             Controls.Add(tbContraseñaIniciarSesion);
@@ -97,6 +97,7 @@
             Controls.Add(lbIniciar);
             Name = "IniciarSesion";
             Text = "IniciarSesion";
+            Load += IniciarSesion_Load;
             ResumeLayout(false);
             PerformLayout();
         }

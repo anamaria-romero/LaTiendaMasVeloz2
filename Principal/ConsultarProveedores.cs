@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -19,11 +19,11 @@ namespace Principal
         {
             string documento = tbDocumento.Text;
 
-            DataTable dt = proveedorController.ConsultarProveedor(documento);
+            ProveedorEntity proveedor = proveedorController.ConsultarProveedor(documento);
 
-            if (dt.Rows.Count > 0)
+            if (proveedor != null)
             {
-                lbMostrarProveedor.Text = $"Proveedor: {dt.Rows[0]["nombre"]}, Teléfono: {dt.Rows[0]["telefono"]}, Documento: {dt.Rows[0]["documento"]}";
+                lbMostrarProveedor.Text = $"Proveedor: {proveedor.nombre}, Teléfono: {proveedor.telefono}, Documento: {proveedor.documento}";
             }
             else
             {

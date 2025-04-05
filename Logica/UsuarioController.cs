@@ -1,120 +1,42 @@
-﻿using System;
-using System.Data;
-using MySql.Data.MySqlClient;
+﻿using Modelo.Entities;
+using Modelo;
 
 namespace Logica
 {
     public class UsuarioController
     {
-        private ConexionMySql conexion = new ConexionMySql();
+        private BaseDatos db = new BaseDatos();
 
-        public string RegistrarUsuario(string nombre, string documento, string rol, string contraseña)
+        public string GuardarUsuario(UsuarioEntity usuario)
         {
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(documento) || string.IsNullOrEmpty(contraseña))
-                return "Todos los campos son obligatorios.";
-
-            string query = "INSERT INTO UsuarioEntity (nombre, documento, rol, contraseña) VALUES (@nombre, @documento, @rol, @contraseña)";
-
-            try
+            if (db.GuardarUsuario(usuario) > 0)
             {
-                using (MySqlConnection conn = conexion.GetConnection())
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@nombre", nombre);
-                    cmd.Parameters.AddWithValue("@documento", documento);
-                    cmd.Parameters.AddWithValue("@rol", rol);
-                    cmd.Parameters.AddWithValue("@contraseña", contraseña);
-                    cmd.ExecuteNonQuery();
-                    return "Usuario registrado correctamente.";
-                }
+                return "Usuario guardado correctamente.";
             }
-            catch (Exception ex)
+            else
             {
-                return "Error al registrar usuario: " + ex.Message;
+                return "Error al guardar el usuario.";
             }
         }
 
-        public DataTable ConsultarUsuario(string documento)
+
+        public UsuarioEntity ConsultarUsuario(string documento)
         {
-            string query = "SELECT * FROM UsuarioEntity WHERE documento = @documento";
-            DataTable dt = new DataTable();
-
-            try
-            {
-                using (MySqlConnection conn = conexion.GetConnection())
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@documento", documento);
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                    {
-                        adapter.Fill(dt);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al consultar usuario: " + ex.Message);
-            }
-
-            return dt;
+            return db.MostrarUsuario(documento);
         }
 
-        public string ActualizarUsuario(string nombre, string documento, string contraseña)
+        public string ActualizarUsuario(UsuarioEntity usuario)
         {
-            try
-            {
-                string query = "UPDATE UsuarioEntity SET nombre = @nombre, contraseña = @contraseña WHERE documento = @documento";
-
-                using (var connection = new MySqlConnection("Server=localhost;Database=LaTiendaMasVeloz;User ID=root;Password=;"))
-                {
-                    connection.Open();
-                    using (var command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@nombre", nombre);
-                        command.Parameters.AddWithValue("@contraseña", contraseña);
-                        command.Parameters.AddWithValue("@documento", documento);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            return "Usuario actualizado con éxito.";
-                        }
-                        else
-                        {
-                            return "No se encontró el usuario para actualizar.";
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                return "Error al actualizar el usuario: " + ex.Message;
-            }
+            int filasAfectadas = db.ActualizarUsuario(usuario);
+            return filasAfectadas > 0 ? "Usuario actualizado correctamente." : "No se pudo actualizar el usuario.";
         }
-
 
         public string EliminarUsuario(string documento)
         {
-            if (string.IsNullOrEmpty(documento))
-                return "El documento es obligatorio.";
-
-            string query = "DELETE FROM UsuarioEntity WHERE documento = @documento";
-
-            try
-            {
-                using (MySqlConnection conn = conexion.GetConnection())
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@documento", documento);
-                    cmd.ExecuteNonQuery();
-                    return "Usuario eliminado correctamente.";
-                }
-            }
-            catch (Exception ex)
-            {
-                return "Error al eliminar usuario: " + ex.Message;
-            }
+            return db.EliminarUsuario(documento) > 0
+                ? "Usuario eliminado exitosamente."
+                : "No se encontró el usuario.";
         }
+
     }
 }

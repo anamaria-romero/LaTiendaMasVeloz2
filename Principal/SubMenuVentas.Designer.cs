@@ -36,7 +36,7 @@
             // btSubMenuConsultarVenta
             // 
             btSubMenuConsultarVenta.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarVenta.Location = new Point(218, 142);
+            btSubMenuConsultarVenta.Location = new Point(202, 109);
             btSubMenuConsultarVenta.Name = "btSubMenuConsultarVenta";
             btSubMenuConsultarVenta.Size = new Size(116, 53);
             btSubMenuConsultarVenta.TabIndex = 15;
@@ -47,7 +47,7 @@
             // btSubMenuRegistrarVenta
             // 
             btSubMenuRegistrarVenta.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarVenta.Location = new Point(76, 142);
+            btSubMenuRegistrarVenta.Location = new Point(60, 109);
             btSubMenuRegistrarVenta.Name = "btSubMenuRegistrarVenta";
             btSubMenuRegistrarVenta.Size = new Size(116, 53);
             btSubMenuRegistrarVenta.TabIndex = 14;
@@ -60,7 +60,7 @@
             lbTituloSubMenuVentas.AutoSize = true;
             lbTituloSubMenuVentas.BackColor = Color.Snow;
             lbTituloSubMenuVentas.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuVentas.Location = new Point(77, 67);
+            lbTituloSubMenuVentas.Location = new Point(61, 41);
             lbTituloSubMenuVentas.Name = "lbTituloSubMenuVentas";
             lbTituloSubMenuVentas.Size = new Size(257, 32);
             lbTituloSubMenuVentas.TabIndex = 13;
@@ -70,7 +70,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(423, 349);
+            ClientSize = new Size(383, 221);
             Controls.Add(btSubMenuConsultarVenta);
             Controls.Add(btSubMenuRegistrarVenta);
             Controls.Add(lbTituloSubMenuVentas);

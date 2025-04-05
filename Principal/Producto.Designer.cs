@@ -36,13 +36,14 @@
             btRegistrarProducto = new Button();
             tbCantidadProducto = new TextBox();
             tbIngreseProveedor = new TextBox();
+            lbProductoRegistrado = new Label();
             SuspendLayout();
             // 
             // lbTituloProducto
             // 
             lbTituloProducto.AutoSize = true;
             lbTituloProducto.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloProducto.Location = new Point(167, 9);
+            lbTituloProducto.Location = new Point(201, 9);
             lbTituloProducto.Name = "lbTituloProducto";
             lbTituloProducto.Size = new Size(160, 32);
             lbTituloProducto.TabIndex = 0;
@@ -50,41 +51,41 @@
             // 
             // tbReferenciaProducto
             // 
-            tbReferenciaProducto.Location = new Point(108, 55);
+            tbReferenciaProducto.Location = new Point(25, 63);
             tbReferenciaProducto.Name = "tbReferenciaProducto";
-            tbReferenciaProducto.Size = new Size(302, 23);
+            tbReferenciaProducto.Size = new Size(239, 23);
             tbReferenciaProducto.TabIndex = 1;
             tbReferenciaProducto.Text = "Ingrese la referencia";
             tbReferenciaProducto.TextChanged += tbReferenciaProducto_TextChanged;
             // 
             // tbNombreProducto
             // 
-            tbNombreProducto.Location = new Point(108, 153);
+            tbNombreProducto.Location = new Point(25, 161);
             tbNombreProducto.Name = "tbNombreProducto";
-            tbNombreProducto.Size = new Size(302, 23);
+            tbNombreProducto.Size = new Size(239, 23);
             tbNombreProducto.TabIndex = 2;
             tbNombreProducto.Text = "Ingrese el nombre";
             // 
             // tbMarcaProducto
             // 
-            tbMarcaProducto.Location = new Point(108, 203);
+            tbMarcaProducto.Location = new Point(290, 63);
             tbMarcaProducto.Name = "tbMarcaProducto";
-            tbMarcaProducto.Size = new Size(302, 23);
+            tbMarcaProducto.Size = new Size(239, 23);
             tbMarcaProducto.TabIndex = 3;
             tbMarcaProducto.Text = "Ingrese la marca";
             // 
             // tbPrecioProducto
             // 
-            tbPrecioProducto.Location = new Point(108, 301);
+            tbPrecioProducto.Location = new Point(290, 161);
             tbPrecioProducto.Name = "tbPrecioProducto";
-            tbPrecioProducto.Size = new Size(302, 23);
+            tbPrecioProducto.Size = new Size(239, 23);
             tbPrecioProducto.TabIndex = 5;
             tbPrecioProducto.Text = "Ingrese el precio";
             // 
             // btRegistrarProducto
             // 
             btRegistrarProducto.BackColor = SystemColors.ActiveCaption;
-            btRegistrarProducto.Location = new Point(187, 348);
+            btRegistrarProducto.Location = new Point(211, 264);
             btRegistrarProducto.Name = "btRegistrarProducto";
             btRegistrarProducto.Size = new Size(140, 50);
             btRegistrarProducto.TabIndex = 6;
@@ -94,25 +95,36 @@
             // 
             // tbCantidadProducto
             // 
-            tbCantidadProducto.Location = new Point(108, 252);
+            tbCantidadProducto.Location = new Point(290, 113);
             tbCantidadProducto.Name = "tbCantidadProducto";
-            tbCantidadProducto.Size = new Size(302, 23);
+            tbCantidadProducto.Size = new Size(239, 23);
             tbCantidadProducto.TabIndex = 4;
             tbCantidadProducto.Text = "Ingrese la cantidad";
             // 
             // tbIngreseProveedor
             // 
-            tbIngreseProveedor.Location = new Point(108, 105);
+            tbIngreseProveedor.Location = new Point(25, 113);
             tbIngreseProveedor.Name = "tbIngreseProveedor";
-            tbIngreseProveedor.Size = new Size(302, 23);
+            tbIngreseProveedor.Size = new Size(239, 23);
             tbIngreseProveedor.TabIndex = 8;
             tbIngreseProveedor.Text = "Ingrese el proveedor";
+            // 
+            // lbProductoRegistrado
+            // 
+            lbProductoRegistrado.AutoSize = true;
+            lbProductoRegistrado.Location = new Point(25, 219);
+            lbProductoRegistrado.Name = "lbProductoRegistrado";
+            lbProductoRegistrado.Size = new Size(118, 15);
+            lbProductoRegistrado.TabIndex = 9;
+            lbProductoRegistrado.Text = "Producto registrado: ";
+            lbProductoRegistrado.Click += lbProductoRegistrado_Click;
             // 
             // Producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(529, 413);
+            ClientSize = new Size(553, 326);
+            Controls.Add(lbProductoRegistrado);
             Controls.Add(tbIngreseProveedor);
             Controls.Add(btRegistrarProducto);
             Controls.Add(tbPrecioProducto);
@@ -137,5 +149,6 @@
         private Button btRegistrarProducto;
         private TextBox tbCantidadProducto;
         private TextBox tbIngreseProveedor;
+        private Label lbProductoRegistrado;
     }
 }

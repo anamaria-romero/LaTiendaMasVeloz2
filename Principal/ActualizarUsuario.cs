@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -12,6 +12,12 @@ namespace Principal
         public ActualizarUsuario()
         {
             InitializeComponent();
+            CargarRoles();
+        }
+
+        private void CargarRoles()
+        {
+            comboBox1.DataSource = Enum.GetValues(typeof(RolUsuario));
         }
 
         private void btBuscarUsuario_Click(object sender, EventArgs e)
@@ -24,23 +30,29 @@ namespace Principal
                 return;
             }
 
-            DataTable dt = usuarioController.ConsultarUsuario(documento);
-            if (dt.Rows.Count > 0)
+            UsuarioEntity usuario = usuarioController.ConsultarUsuario(documento);
+
+            if (usuario != null)
             {
-                tbActualizarNombre.Text = dt.Rows[0]["nombre"].ToString();
-                tbActualizarContraseña.Text = dt.Rows[0]["contraseña"].ToString();
+                tbActualizarNombre.Text = usuario.nombre;
+                tbActualizarContraseña.Text = usuario.contraseña;
+                comboBox1.SelectedItem = usuario.rol;
+
+                lbUsuarioActualizar.Text = $"Usuario encontrado: {usuario.nombre}";
             }
             else
             {
                 MessageBox.Show("Usuario no encontrado.");
+                lbUsuarioActualizar.Text = "";
             }
         }
 
-        private void btActualizar_Click(object sender, EventArgs e)
+        private void btActualizarUsuario_Click(object sender, EventArgs e)
         {
             string documento = tbDocumento.Text.Trim();
             string nombre = tbActualizarNombre.Text.Trim();
             string contraseña = tbActualizarContraseña.Text.Trim();
+            RolUsuario rolSeleccionado = (RolUsuario)comboBox1.SelectedItem;
 
             if (string.IsNullOrEmpty(documento) || string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(contraseña))
             {
@@ -48,8 +60,34 @@ namespace Principal
                 return;
             }
 
-            string mensaje = usuarioController.ActualizarUsuario(nombre, documento, contraseña);
+            UsuarioEntity usuario = new UsuarioEntity
+            {
+                documento = documento,
+                nombre = nombre,
+                contraseña = contraseña,
+                rol = rolSeleccionado
+            };
+
+            string mensaje = usuarioController.ActualizarUsuario(usuario);
+
+            if (mensaje.Contains("correctamente"))
+            {
+                lbUsuarioActuzalido.Text = $"Usuario actualizado: {usuario.nombre},\n Rol: {usuario.rol}, \n Contraseña: {usuario.contraseña}";
+            }
+            else
+            {
+                lbUsuarioActuzalido.Text = mensaje;
+            }
+
             MessageBox.Show(mensaje);
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        private void lbUsuarioActualizar_Click(object sender, EventArgs e) { }
+
+        private void lbUsuarioActuzalido_Click(object sender, EventArgs e) { }
+
+
     }
 }

@@ -14,6 +14,8 @@ namespace Principal
             productoController = new ProductoController();
         }
 
+
+
         private void btRegistrarProducto_Click(object sender, EventArgs e)
         {
             string nombre = tbNombreProducto.Text.Trim();
@@ -29,18 +31,36 @@ namespace Principal
                 return;
             }
 
+            ProductoEntity producto = new ProductoEntity
+            {
+                nombre = nombre,
+                marca = marca,
+                cantidad = cantidad,
+                precio = precio,
+                referencia = referencia,
+                id_proveedor = idProveedor
+            };
+
             try
             {
-                productoController.CrearProducto(nombre, marca, cantidad, precio, idProveedor, referencia);
+                productoController.GuardarProducto(producto);
                 MessageBox.Show("Producto registrado correctamente.");
+
+                lbProductoRegistrado.Text = $"Producto registrado: {producto.nombre}, Marca: {producto.marca}, Cantidad: {producto.cantidad}, Precio: ${producto.precio}";
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar el producto: " + ex.Message);
+                lbProductoRegistrado.Text = "";
             }
         }
 
         private void tbReferenciaProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbProductoRegistrado_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using Logica;
+using Modelo.Entities;
 
 namespace Principal
 {
@@ -17,7 +17,6 @@ namespace Principal
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
-
             string nombre = tbActualizarNombre.Text.Trim();
             string telefono = tbActualizarTelefono.Text.Trim();
             string documento = tbDocumento.Text.Trim();
@@ -34,9 +33,27 @@ namespace Principal
                 return;
             }
 
-            string mensaje = clienteController.ActualizarCliente(nombre, telefono, documento);
+            ClienteEntity cliente = new ClienteEntity
+            {
+                documento = documento,
+                nombre = nombre,
+                telefono = telefono
+            };
+
+            string mensaje = clienteController.ActualizarCliente(cliente);
+
             lbClienteActualizado.Text = mensaje;
+
+            if (mensaje == "Cliente actualizado exitosamente.")
+            {
+                ClienteEntity clienteActualizado = clienteController.ConsultarCliente(documento);
+                if (clienteActualizado != null)
+                {
+                    lbClienteActualizado.Text = $"Cliente actualizado: {clienteActualizado.nombre}, Teléfono: {clienteActualizado.telefono}";
+                }
+            }
         }
+
 
 
         private void btBuscarCliente_Click(object sender, EventArgs e)
@@ -49,19 +66,15 @@ namespace Principal
                 return;
             }
 
-            DataTable clienteData = clienteController.ConsultarCliente(documento);
+            ClienteEntity cliente = clienteController.ConsultarCliente(documento);
 
-            if (clienteData.Rows.Count > 0)
+            if (cliente != null)
             {
-                string nombre = clienteData.Rows[0]["nombre"].ToString();
-                string telefono = clienteData.Rows[0]["telefono"].ToString();
-                string doc = clienteData.Rows[0]["documento"].ToString();
+                tbActualizarNombre.Text = cliente.nombre;
+                tbActualizarTelefono.Text = cliente.telefono;
+                tbDocumento.Text = cliente.documento;
 
-                tbActualizarNombre.Text = nombre;
-                tbActualizarTelefono.Text = telefono;
-                tbDocumento.Text = doc;
-
-                label1.Text = $"Cliente encontrado: {nombre}";
+                label1.Text = $"Cliente encontrado: {cliente.nombre}";
             }
             else
             {
@@ -71,24 +84,12 @@ namespace Principal
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        private void label1_Click(object sender, EventArgs e) { }
 
-        }
+        private void tbActualizarNombre_TextChanged(object sender, EventArgs e) { }
 
-        private void tbActualizarNombre_TextChanged(object sender, EventArgs e)
-        {
+        private void tbActualizarTelefono_TextChanged(object sender, EventArgs e) { }
 
-        }
-
-        private void tbActualizarTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbClienteActualizado_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lbClienteActualizado_Click(object sender, EventArgs e) { }
     }
 }

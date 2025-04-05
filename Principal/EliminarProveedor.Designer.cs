@@ -37,7 +37,7 @@
             // btEliminarProveedor
             // 
             btEliminarProveedor.BackColor = SystemColors.ActiveCaption;
-            btEliminarProveedor.Location = new Point(125, 235);
+            btEliminarProveedor.Location = new Point(103, 183);
             btEliminarProveedor.Name = "btEliminarProveedor";
             btEliminarProveedor.Size = new Size(153, 60);
             btEliminarProveedor.TabIndex = 7;
@@ -48,15 +48,16 @@
             // lbMostrarProveedor
             // 
             lbMostrarProveedor.AutoSize = true;
-            lbMostrarProveedor.Location = new Point(65, 178);
+            lbMostrarProveedor.Location = new Point(41, 128);
             lbMostrarProveedor.Name = "lbMostrarProveedor";
             lbMostrarProveedor.Size = new Size(64, 15);
             lbMostrarProveedor.TabIndex = 6;
             lbMostrarProveedor.Text = "Proveedor:";
+            lbMostrarProveedor.Click += lbMostrarProveedor_Click;
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(65, 126);
+            tbDocumento.Location = new Point(41, 80);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(287, 23);
             tbDocumento.TabIndex = 5;
@@ -66,7 +67,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(56, 56);
+            label1.Location = new Point(26, 30);
             label1.Name = "label1";
             label1.Size = new Size(321, 32);
             label1.TabIndex = 4;
@@ -76,7 +77,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(417, 353);
+            ClientSize = new Size(369, 257);
             Controls.Add(btEliminarProveedor);
             Controls.Add(lbMostrarProveedor);
             Controls.Add(tbDocumento);

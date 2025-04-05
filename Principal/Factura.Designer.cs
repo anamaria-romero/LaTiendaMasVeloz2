@@ -37,6 +37,11 @@
             btBuscarFactura = new Button();
             btCargaralalistaFactura = new Button();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -51,11 +56,8 @@
             textBox5 = new TextBox();
             label4 = new Label();
             button2 = new Button();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
+            lbCantidadProductoFactura = new Label();
+            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -64,7 +66,7 @@
             // 
             lbTituloFactura.AutoSize = true;
             lbTituloFactura.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloFactura.Location = new Point(245, 23);
+            lbTituloFactura.Location = new Point(244, 9);
             lbTituloFactura.Name = "lbTituloFactura";
             lbTituloFactura.Size = new Size(139, 32);
             lbTituloFactura.TabIndex = 0;
@@ -74,7 +76,7 @@
             // 
             lbIdArticulo.AutoSize = true;
             lbIdArticulo.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbIdArticulo.Location = new Point(19, 120);
+            lbIdArticulo.Location = new Point(19, 170);
             lbIdArticulo.Name = "lbIdArticulo";
             lbIdArticulo.Size = new Size(74, 17);
             lbIdArticulo.TabIndex = 1;
@@ -84,7 +86,7 @@
             // 
             lbIdCliente.AutoSize = true;
             lbIdCliente.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbIdCliente.Location = new Point(18, 154);
+            lbIdCliente.Location = new Point(28, 98);
             lbIdCliente.Name = "lbIdCliente";
             lbIdCliente.Size = new Size(65, 17);
             lbIdCliente.TabIndex = 2;
@@ -94,7 +96,7 @@
             // 
             lbIdEmpleado.AutoSize = true;
             lbIdEmpleado.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbIdEmpleado.Location = new Point(8, 201);
+            lbIdEmpleado.Location = new Point(8, 130);
             lbIdEmpleado.Name = "lbIdEmpleado";
             lbIdEmpleado.Size = new Size(85, 17);
             lbIdEmpleado.TabIndex = 3;
@@ -114,7 +116,7 @@
             // 
             lbFechaFactura.AutoSize = true;
             lbFechaFactura.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbFechaFactura.Location = new Point(40, 78);
+            lbFechaFactura.Location = new Point(40, 64);
             lbFechaFactura.Name = "lbFechaFactura";
             lbFechaFactura.Size = new Size(41, 17);
             lbFechaFactura.TabIndex = 5;
@@ -123,9 +125,9 @@
             // btBuscarFactura
             // 
             btBuscarFactura.BackColor = SystemColors.ActiveCaption;
-            btBuscarFactura.Location = new Point(293, 113);
+            btBuscarFactura.Location = new Point(283, 169);
             btBuscarFactura.Name = "btBuscarFactura";
-            btBuscarFactura.Size = new Size(95, 37);
+            btBuscarFactura.Size = new Size(91, 22);
             btBuscarFactura.TabIndex = 6;
             btBuscarFactura.Text = "Buscar";
             btBuscarFactura.UseVisualStyleBackColor = false;
@@ -133,9 +135,9 @@
             // btCargaralalistaFactura
             // 
             btCargaralalistaFactura.BackColor = SystemColors.ActiveCaption;
-            btCargaralalistaFactura.Location = new Point(15, 285);
+            btCargaralalistaFactura.Location = new Point(122, 287);
             btCargaralalistaFactura.Name = "btCargaralalistaFactura";
-            btCargaralalistaFactura.Size = new Size(207, 75);
+            btCargaralalistaFactura.Size = new Size(110, 43);
             btCargaralalistaFactura.TabIndex = 7;
             btCargaralalistaFactura.Text = "Cargar a la lista";
             btCargaralalistaFactura.UseVisualStyleBackColor = false;
@@ -144,14 +146,39 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(12, 377);
+            dataGridView1.Location = new Point(28, 352);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(546, 132);
+            dataGridView1.Size = new Size(553, 132);
             dataGridView1.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Fecha";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "IdArticulo";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "IdCliente";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "IdEmpleado";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "SubTotal";
+            Column5.Name = "Column5";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(99, 119);
+            textBox1.Location = new Point(99, 169);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(163, 23);
             textBox1.TabIndex = 10;
@@ -165,30 +192,30 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(99, 201);
+            textBox3.Location = new Point(99, 130);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(163, 23);
             textBox3.TabIndex = 12;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(99, 156);
+            textBox4.Location = new Point(99, 94);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(163, 23);
             textBox4.TabIndex = 13;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(99, 78);
+            dateTimePicker1.Location = new Point(99, 60);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(228, 23);
             dateTimePicker1.TabIndex = 14;
             // 
             // lbTotalpagarFactura
             // 
             lbTotalpagarFactura.AutoSize = true;
             lbTotalpagarFactura.Font = new Font("Segoe UI", 10F);
-            lbTotalpagarFactura.Location = new Point(439, 98);
+            lbTotalpagarFactura.Location = new Point(450, 120);
             lbTotalpagarFactura.Name = "lbTotalpagarFactura";
             lbTotalpagarFactura.Size = new Size(91, 19);
             lbTotalpagarFactura.TabIndex = 15;
@@ -237,14 +264,14 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(lbNumeroTotal);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(418, 130);
+            panel1.Location = new Point(432, 152);
             panel1.Name = "panel1";
-            panel1.Size = new Size(124, 49);
+            panel1.Size = new Size(124, 41);
             panel1.TabIndex = 20;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(400, 252);
+            textBox5.Location = new Point(412, 252);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(163, 23);
             textBox5.TabIndex = 22;
@@ -253,7 +280,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(451, 225);
+            label4.Location = new Point(463, 225);
             label4.Name = "label4";
             label4.Size = new Size(56, 17);
             label4.TabIndex = 21;
@@ -262,43 +289,36 @@
             // button2
             // 
             button2.BackColor = SystemColors.ActiveCaption;
-            button2.Location = new Point(400, 285);
+            button2.Location = new Point(444, 288);
             button2.Name = "button2";
-            button2.Size = new Size(163, 59);
+            button2.Size = new Size(107, 40);
             button2.TabIndex = 23;
             button2.Text = "Vender";
             button2.UseVisualStyleBackColor = false;
             // 
-            // Column1
+            // lbCantidadProductoFactura
             // 
-            Column1.HeaderText = "Fecha";
-            Column1.Name = "Column1";
+            lbCantidadProductoFactura.AutoSize = true;
+            lbCantidadProductoFactura.Location = new Point(19, 209);
+            lbCantidadProductoFactura.Name = "lbCantidadProductoFactura";
+            lbCantidadProductoFactura.Size = new Size(58, 15);
+            lbCantidadProductoFactura.TabIndex = 24;
+            lbCantidadProductoFactura.Text = "Cantidad:";
             // 
-            // Column2
+            // textBox6
             // 
-            Column2.HeaderText = "IdArticulo";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "IdCliente";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "IdEmpleado";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "SubTotal";
-            Column5.Name = "Column5";
+            textBox6.Location = new Point(99, 209);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(163, 23);
+            textBox6.TabIndex = 25;
             // 
             // Fecha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(621, 521);
+            Controls.Add(textBox6);
+            Controls.Add(lbCantidadProductoFactura);
             Controls.Add(button2);
             Controls.Add(textBox5);
             Controls.Add(label4);
@@ -357,5 +377,7 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
+        private Label lbCantidadProductoFactura;
+        private TextBox textBox6;
     }
 }

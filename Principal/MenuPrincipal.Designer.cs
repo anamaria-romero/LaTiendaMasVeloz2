@@ -40,7 +40,7 @@
             // btVentas
             // 
             btVentas.BackColor = SystemColors.ActiveCaption;
-            btVentas.Location = new Point(201, 338);
+            btVentas.Location = new Point(166, 188);
             btVentas.Name = "btVentas";
             btVentas.Size = new Size(115, 56);
             btVentas.TabIndex = 13;
@@ -51,7 +51,7 @@
             // btProveedores
             // 
             btProveedores.BackColor = SystemColors.ActiveCaption;
-            btProveedores.Location = new Point(269, 254);
+            btProveedores.Location = new Point(298, 231);
             btProveedores.Name = "btProveedores";
             btProveedores.Size = new Size(115, 56);
             btProveedores.TabIndex = 12;
@@ -62,7 +62,7 @@
             // btInventario
             // 
             btInventario.BackColor = SystemColors.ActiveCaption;
-            btInventario.Location = new Point(126, 254);
+            btInventario.Location = new Point(39, 231);
             btInventario.Name = "btInventario";
             btInventario.Size = new Size(115, 56);
             btInventario.TabIndex = 11;
@@ -73,7 +73,7 @@
             // btUsuarios
             // 
             btUsuarios.BackColor = SystemColors.ActiveCaption;
-            btUsuarios.Location = new Point(269, 169);
+            btUsuarios.Location = new Point(298, 146);
             btUsuarios.Name = "btUsuarios";
             btUsuarios.Size = new Size(115, 56);
             btUsuarios.TabIndex = 10;
@@ -84,7 +84,7 @@
             // btClientes
             // 
             btClientes.BackColor = SystemColors.ActiveCaption;
-            btClientes.Location = new Point(126, 169);
+            btClientes.Location = new Point(39, 146);
             btClientes.Name = "btClientes";
             btClientes.Size = new Size(115, 56);
             btClientes.TabIndex = 9;
@@ -96,7 +96,7 @@
             // 
             lbTituloPagina.AutoSize = true;
             lbTituloPagina.Font = new Font("Snap ITC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbTituloPagina.Location = new Point(40, 40);
+            lbTituloPagina.Location = new Point(12, 25);
             lbTituloPagina.Name = "lbTituloPagina";
             lbTituloPagina.Size = new Size(434, 37);
             lbTituloPagina.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             lbTituloMenu.AutoSize = true;
             lbTituloMenu.Font = new Font("Stencil", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloMenu.Location = new Point(146, 97);
+            lbTituloMenu.Location = new Point(108, 77);
             lbTituloMenu.Name = "lbTituloMenu";
             lbTituloMenu.Size = new Size(223, 29);
             lbTituloMenu.TabIndex = 7;
@@ -116,7 +116,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(513, 422);
+            ClientSize = new Size(456, 320);
             Controls.Add(btVentas);
             Controls.Add(btProveedores);
             Controls.Add(btInventario);

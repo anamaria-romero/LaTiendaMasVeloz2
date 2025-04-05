@@ -38,7 +38,7 @@
             // btSubMenuEliminarProducto
             // 
             btSubMenuEliminarProducto.BackColor = SystemColors.ActiveCaption;
-            btSubMenuEliminarProducto.Location = new Point(245, 210);
+            btSubMenuEliminarProducto.Location = new Point(206, 171);
             btSubMenuEliminarProducto.Name = "btSubMenuEliminarProducto";
             btSubMenuEliminarProducto.Size = new Size(116, 53);
             btSubMenuEliminarProducto.TabIndex = 9;
@@ -49,7 +49,7 @@
             // btSubMenuConsultarProducto
             // 
             btSubMenuConsultarProducto.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarProducto.Location = new Point(103, 210);
+            btSubMenuConsultarProducto.Location = new Point(64, 171);
             btSubMenuConsultarProducto.Name = "btSubMenuConsultarProducto";
             btSubMenuConsultarProducto.Size = new Size(116, 53);
             btSubMenuConsultarProducto.TabIndex = 8;
@@ -60,7 +60,7 @@
             // btSubMenuActualizarProducto
             // 
             btSubMenuActualizarProducto.BackColor = SystemColors.ActiveCaption;
-            btSubMenuActualizarProducto.Location = new Point(245, 125);
+            btSubMenuActualizarProducto.Location = new Point(206, 86);
             btSubMenuActualizarProducto.Name = "btSubMenuActualizarProducto";
             btSubMenuActualizarProducto.Size = new Size(116, 53);
             btSubMenuActualizarProducto.TabIndex = 7;
@@ -71,7 +71,7 @@
             // btSubMenuRegistrarProducto
             // 
             btSubMenuRegistrarProducto.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarProducto.Location = new Point(103, 125);
+            btSubMenuRegistrarProducto.Location = new Point(64, 86);
             btSubMenuRegistrarProducto.Name = "btSubMenuRegistrarProducto";
             btSubMenuRegistrarProducto.Size = new Size(116, 53);
             btSubMenuRegistrarProducto.TabIndex = 6;
@@ -84,7 +84,7 @@
             lbTituloSubMenuProductos.AutoSize = true;
             lbTituloSubMenuProductos.BackColor = Color.Snow;
             lbTituloSubMenuProductos.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuProductos.Location = new Point(90, 58);
+            lbTituloSubMenuProductos.Location = new Point(39, 29);
             lbTituloSubMenuProductos.Name = "lbTituloSubMenuProductos";
             lbTituloSubMenuProductos.Size = new Size(315, 32);
             lbTituloSubMenuProductos.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(470, 365);
+            ClientSize = new Size(394, 260);
             Controls.Add(btSubMenuEliminarProducto);
             Controls.Add(btSubMenuConsultarProducto);
             Controls.Add(btSubMenuActualizarProducto);
