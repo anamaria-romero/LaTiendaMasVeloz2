@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class ConsultarProducto
+    partial class ConsultarFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -28,50 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbMostrarProducto = new Label();
+            lbMostrarFactura = new Label();
             btConsultar = new Button();
-            tbIdentificador = new TextBox();
-            lbTituloConsultarProductos = new Label();
+            tbIdentificadorFactura = new TextBox();
+            lbTituloConsultarFactura = new Label();
             btVolver = new Button();
             SuspendLayout();
             // 
-            // lbMostrarProducto
+            // lbMostrarFactura
             // 
-            lbMostrarProducto.AutoSize = true;
-            lbMostrarProducto.Location = new Point(62, 139);
-            lbMostrarProducto.Name = "lbMostrarProducto";
-            lbMostrarProducto.Size = new Size(59, 15);
-            lbMostrarProducto.TabIndex = 16;
-            lbMostrarProducto.Text = "Producto:";
+            lbMostrarFactura.AutoSize = true;
+            lbMostrarFactura.Location = new Point(53, 143);
+            lbMostrarFactura.Name = "lbMostrarFactura";
+            lbMostrarFactura.Size = new Size(49, 15);
+            lbMostrarFactura.TabIndex = 16;
+            lbMostrarFactura.Text = "Factura:";
+            lbMostrarFactura.Click += lbMostrarFactura_Click;
             // 
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(119, 219);
+            btConsultar.Location = new Point(99, 294);
             btConsultar.Name = "btConsultar";
-            btConsultar.Size = new Size(127, 46);
+            btConsultar.Size = new Size(127, 49);
             btConsultar.TabIndex = 15;
             btConsultar.Text = "CONSULTAR";
             btConsultar.UseVisualStyleBackColor = false;
             btConsultar.Click += btConsultar_Click;
             // 
-            // tbIdentificador
+            // tbIdentificadorFactura
             // 
-            tbIdentificador.Location = new Point(62, 94);
-            tbIdentificador.Name = "tbIdentificador";
-            tbIdentificador.Size = new Size(241, 23);
-            tbIdentificador.TabIndex = 14;
-            tbIdentificador.Text = "Ingresar Identificador";
+            tbIdentificadorFactura.Location = new Point(53, 100);
+            tbIdentificadorFactura.Name = "tbIdentificadorFactura";
+            tbIdentificadorFactura.Size = new Size(241, 23);
+            tbIdentificadorFactura.TabIndex = 14;
+            tbIdentificadorFactura.Text = "Ingresar Identificador";
+            tbIdentificadorFactura.TextChanged += tbIdentificadorFactura_TextChanged;
             // 
-            // lbTituloConsultarProductos
+            // lbTituloConsultarFactura
             // 
-            lbTituloConsultarProductos.AutoSize = true;
-            lbTituloConsultarProductos.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloConsultarProductos.Location = new Point(14, 43);
-            lbTituloConsultarProductos.Name = "lbTituloConsultarProductos";
-            lbTituloConsultarProductos.Size = new Size(343, 32);
-            lbTituloConsultarProductos.TabIndex = 13;
-            lbTituloConsultarProductos.Text = "CONSULTAR PRODUCTOS";
+            lbTituloConsultarFactura.AutoSize = true;
+            lbTituloConsultarFactura.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbTituloConsultarFactura.Location = new Point(43, 44);
+            lbTituloConsultarFactura.Name = "lbTituloConsultarFactura";
+            lbTituloConsultarFactura.Size = new Size(269, 32);
+            lbTituloConsultarFactura.TabIndex = 13;
+            lbTituloConsultarFactura.Text = "CONSULTAR VENTA";
             // 
             // btVolver
             // 
@@ -79,33 +81,33 @@
             btVolver.Location = new Point(12, 12);
             btVolver.Name = "btVolver";
             btVolver.Size = new Size(56, 24);
-            btVolver.TabIndex = 33;
+            btVolver.TabIndex = 36;
             btVolver.Text = "Volver";
             btVolver.UseVisualStyleBackColor = false;
             btVolver.Click += btVolver_Click;
             // 
-            // ConsultarProducto
+            // ConsultarFactura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(371, 271);
+            ClientSize = new Size(354, 355);
             Controls.Add(btVolver);
-            Controls.Add(lbMostrarProducto);
+            Controls.Add(lbMostrarFactura);
             Controls.Add(btConsultar);
-            Controls.Add(tbIdentificador);
-            Controls.Add(lbTituloConsultarProductos);
-            Name = "ConsultarProducto";
-            Text = "ConsultarProducto";
+            Controls.Add(tbIdentificadorFactura);
+            Controls.Add(lbTituloConsultarFactura);
+            Name = "ConsultarFactura";
+            Text = "ConsultarFactura";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lbMostrarProducto;
+        private Label lbMostrarFactura;
         private Button btConsultar;
-        private TextBox tbIdentificador;
-        private Label lbTituloConsultarProductos;
+        private TextBox tbIdentificadorFactura;
+        private Label lbTituloConsultarFactura;
         private Button btVolver;
     }
 }

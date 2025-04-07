@@ -35,12 +35,13 @@
             lbTituloActualizarProveedores = new Label();
             lbProveedorActualizado = new Label();
             btBuscarProveedor = new Button();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btActualizar
             // 
             btActualizar.BackColor = SystemColors.ActiveCaption;
-            btActualizar.Location = new Point(293, 232);
+            btActualizar.Location = new Point(293, 246);
             btActualizar.Name = "btActualizar";
             btActualizar.Size = new Size(127, 48);
             btActualizar.TabIndex = 11;
@@ -50,7 +51,7 @@
             // 
             // tbActualizarTelefono
             // 
-            tbActualizarTelefono.Location = new Point(251, 134);
+            tbActualizarTelefono.Location = new Point(251, 148);
             tbActualizarTelefono.Name = "tbActualizarTelefono";
             tbActualizarTelefono.Size = new Size(212, 23);
             tbActualizarTelefono.TabIndex = 9;
@@ -58,7 +59,7 @@
             // 
             // tbActualizarNombre
             // 
-            tbActualizarNombre.Location = new Point(251, 90);
+            tbActualizarNombre.Location = new Point(251, 104);
             tbActualizarNombre.Name = "tbActualizarNombre";
             tbActualizarNombre.Size = new Size(212, 23);
             tbActualizarNombre.TabIndex = 8;
@@ -66,7 +67,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(17, 90);
+            tbDocumento.Location = new Point(17, 104);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(212, 23);
             tbDocumento.TabIndex = 7;
@@ -76,7 +77,7 @@
             // 
             lbTituloActualizarProveedores.AutoSize = true;
             lbTituloActualizarProveedores.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloActualizarProveedores.Location = new Point(51, 25);
+            lbTituloActualizarProveedores.Location = new Point(51, 39);
             lbTituloActualizarProveedores.Name = "lbTituloActualizarProveedores";
             lbTituloActualizarProveedores.Size = new Size(388, 32);
             lbTituloActualizarProveedores.TabIndex = 6;
@@ -85,7 +86,7 @@
             // lbProveedorActualizado
             // 
             lbProveedorActualizado.AutoSize = true;
-            lbProveedorActualizado.Location = new Point(251, 183);
+            lbProveedorActualizado.Location = new Point(251, 197);
             lbProveedorActualizado.Name = "lbProveedorActualizado";
             lbProveedorActualizado.Size = new Size(129, 15);
             lbProveedorActualizado.TabIndex = 13;
@@ -95,7 +96,7 @@
             // btBuscarProveedor
             // 
             btBuscarProveedor.BackColor = SystemColors.ActiveCaption;
-            btBuscarProveedor.Location = new Point(51, 134);
+            btBuscarProveedor.Location = new Point(51, 148);
             btBuscarProveedor.Name = "btBuscarProveedor";
             btBuscarProveedor.Size = new Size(117, 42);
             btBuscarProveedor.TabIndex = 14;
@@ -103,11 +104,23 @@
             btBuscarProveedor.UseVisualStyleBackColor = false;
             btBuscarProveedor.Click += btBuscarProveedor_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 30;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // ActualizarProveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(512, 292);
+            ClientSize = new Size(512, 305);
+            Controls.Add(btVolver);
             Controls.Add(btBuscarProveedor);
             Controls.Add(lbProveedorActualizado);
             Controls.Add(btActualizar);
@@ -130,5 +143,6 @@
         private Label lbTituloActualizarProveedores;
         private Label lbProveedorActualizado;
         private Button btBuscarProveedor;
+        private Button btVolver;
     }
 }

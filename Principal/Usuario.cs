@@ -93,6 +93,13 @@ namespace Principal
                 return Texto;
             }
         }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuUsuarios menu = new SubMenuUsuarios();
+            menu.Show();
+            this.Hide();
+        }
     }
 
     public static class EnumHelper

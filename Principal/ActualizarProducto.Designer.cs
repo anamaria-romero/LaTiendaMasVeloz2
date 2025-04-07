@@ -45,6 +45,7 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btActualizarProducto
@@ -199,11 +200,23 @@
             label7.Text = "Producto registrado:";
             label7.Click += label7_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 34;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // ActualizarProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(629, 419);
+            Controls.Add(btVolver);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -246,5 +259,6 @@
         private Label label5;
         private Label label6;
         private Label label7;
+        private Button btVolver;
     }
 }

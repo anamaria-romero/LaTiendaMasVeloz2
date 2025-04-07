@@ -36,6 +36,7 @@
             label1 = new Label();
             lbClienteActualizado = new Label();
             btBuscarCliente = new Button();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // lbTituloActualizarCliente
@@ -116,11 +117,23 @@
             btBuscarCliente.UseVisualStyleBackColor = false;
             btBuscarCliente.Click += btBuscarCliente_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 40;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // ActualizarClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(575, 263);
+            Controls.Add(btVolver);
             Controls.Add(btBuscarCliente);
             Controls.Add(lbClienteActualizado);
             Controls.Add(label1);
@@ -145,5 +158,6 @@
         private Label label1;
         private Label lbClienteActualizado;
         private Button btBuscarCliente;
+        private Button btVolver;
     }
 }

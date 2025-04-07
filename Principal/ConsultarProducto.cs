@@ -36,5 +36,12 @@ namespace Principal
                 MessageBox.Show("Producto no encontrado.");
             }
         }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuProductos menu = new SubMenuProductos();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

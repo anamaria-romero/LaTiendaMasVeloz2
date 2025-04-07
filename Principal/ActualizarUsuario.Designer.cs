@@ -37,12 +37,13 @@
             lbUsuarioActualizar = new Label();
             comboBox1 = new ComboBox();
             lbUsuarioActuzalido = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btBuscarUsuario
             // 
             btBuscarUsuario.BackColor = SystemColors.ActiveCaption;
-            btBuscarUsuario.Location = new Point(67, 164);
+            btBuscarUsuario.Location = new Point(67, 173);
             btBuscarUsuario.Name = "btBuscarUsuario";
             btBuscarUsuario.Size = new Size(118, 40);
             btBuscarUsuario.TabIndex = 22;
@@ -53,7 +54,7 @@
             // btActualizarUsuario
             // 
             btActualizarUsuario.BackColor = SystemColors.ActiveCaption;
-            btActualizarUsuario.Location = new Point(311, 266);
+            btActualizarUsuario.Location = new Point(311, 275);
             btActualizarUsuario.Name = "btActualizarUsuario";
             btActualizarUsuario.Size = new Size(119, 42);
             btActualizarUsuario.TabIndex = 19;
@@ -63,7 +64,7 @@
             // 
             // tbActualizarContraseña
             // 
-            tbActualizarContraseña.Location = new Point(269, 120);
+            tbActualizarContraseña.Location = new Point(269, 129);
             tbActualizarContraseña.Name = "tbActualizarContraseña";
             tbActualizarContraseña.Size = new Size(206, 23);
             tbActualizarContraseña.TabIndex = 18;
@@ -71,7 +72,7 @@
             // 
             // tbActualizarNombre
             // 
-            tbActualizarNombre.Location = new Point(269, 76);
+            tbActualizarNombre.Location = new Point(269, 85);
             tbActualizarNombre.Name = "tbActualizarNombre";
             tbActualizarNombre.Size = new Size(206, 23);
             tbActualizarNombre.TabIndex = 17;
@@ -79,7 +80,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(23, 76);
+            tbDocumento.Location = new Point(23, 85);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(206, 23);
             tbDocumento.TabIndex = 16;
@@ -89,7 +90,7 @@
             // 
             lbTituloActualizarProveedores.AutoSize = true;
             lbTituloActualizarProveedores.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloActualizarProveedores.Location = new Point(101, 19);
+            lbTituloActualizarProveedores.Location = new Point(101, 28);
             lbTituloActualizarProveedores.Name = "lbTituloActualizarProveedores";
             lbTituloActualizarProveedores.Size = new Size(329, 32);
             lbTituloActualizarProveedores.TabIndex = 15;
@@ -108,7 +109,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(269, 164);
+            comboBox1.Location = new Point(269, 173);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(206, 23);
             comboBox1.TabIndex = 24;
@@ -117,18 +118,30 @@
             // lbUsuarioActuzalido
             // 
             lbUsuarioActuzalido.AutoSize = true;
-            lbUsuarioActuzalido.Location = new Point(269, 210);
+            lbUsuarioActuzalido.Location = new Point(269, 219);
             lbUsuarioActuzalido.Name = "lbUsuarioActuzalido";
             lbUsuarioActuzalido.Size = new Size(115, 15);
             lbUsuarioActuzalido.TabIndex = 25;
             lbUsuarioActuzalido.Text = "Usuario Actualizado:";
             lbUsuarioActuzalido.Click += lbUsuarioActuzalido_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 26;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // ActualizarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(522, 320);
+            Controls.Add(btVolver);
             Controls.Add(lbUsuarioActuzalido);
             Controls.Add(comboBox1);
             Controls.Add(lbUsuarioActualizar);
@@ -155,5 +168,6 @@
         private Label lbUsuarioActualizar;
         private ComboBox comboBox1;
         private Label lbUsuarioActuzalido;
+        private Button btVolver;
     }
 }

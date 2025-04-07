@@ -32,12 +32,13 @@
             lbMostrarProducto = new Label();
             tbIdentificador = new TextBox();
             lbEliminarProductos = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btEliminarProducto
             // 
             btEliminarProducto.BackColor = SystemColors.ActiveCaption;
-            btEliminarProducto.Location = new Point(108, 180);
+            btEliminarProducto.Location = new Point(108, 195);
             btEliminarProducto.Name = "btEliminarProducto";
             btEliminarProducto.Size = new Size(141, 50);
             btEliminarProducto.TabIndex = 7;
@@ -48,7 +49,7 @@
             // lbMostrarProducto
             // 
             lbMostrarProducto.AutoSize = true;
-            lbMostrarProducto.Location = new Point(40, 121);
+            lbMostrarProducto.Location = new Point(40, 136);
             lbMostrarProducto.Name = "lbMostrarProducto";
             lbMostrarProducto.Size = new Size(59, 15);
             lbMostrarProducto.TabIndex = 6;
@@ -57,7 +58,7 @@
             // 
             // tbIdentificador
             // 
-            tbIdentificador.Location = new Point(40, 79);
+            tbIdentificador.Location = new Point(40, 94);
             tbIdentificador.Name = "tbIdentificador";
             tbIdentificador.Size = new Size(286, 23);
             tbIdentificador.TabIndex = 5;
@@ -67,17 +68,29 @@
             // 
             lbEliminarProductos.AutoSize = true;
             lbEliminarProductos.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbEliminarProductos.Location = new Point(27, 27);
+            lbEliminarProductos.Location = new Point(27, 42);
             lbEliminarProductos.Name = "lbEliminarProductos";
             lbEliminarProductos.Size = new Size(319, 32);
             lbEliminarProductos.TabIndex = 4;
             lbEliminarProductos.Text = "Eliminar Productos";
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 32;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // EliminarProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(366, 245);
+            ClientSize = new Size(366, 257);
+            Controls.Add(btVolver);
             Controls.Add(btEliminarProducto);
             Controls.Add(lbMostrarProducto);
             Controls.Add(tbIdentificador);
@@ -94,5 +107,6 @@
         private Label lbMostrarProducto;
         private TextBox tbIdentificador;
         private Label lbEliminarProductos;
+        private Button btVolver;
     }
 }

@@ -25,5 +25,11 @@ namespace Principal
             lbClienteIngresado.Text = $"Cliente: {nombre}, Teléfono: {telefono}, Documento: {documento}";
         }
 
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes menu = new SubMenuClientes();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

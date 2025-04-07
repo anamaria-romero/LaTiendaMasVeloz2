@@ -311,6 +311,48 @@ namespace Logica
                 return cmd.ExecuteNonQuery();
             }
         }
+
+        public int CrearFactura(FacturaEntity factura)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = @"INSERT INTO FacturaEntity (id_cliente, id_empleado, total) 
+                         VALUES (@id_cliente, @id_empleado, @total);
+                         SELECT LAST_INSERT_ID();";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id_cliente", factura.id_cliente);
+                    cmd.Parameters.AddWithValue("@id_empleado", factura.id_empleado);
+                    cmd.Parameters.AddWithValue("@total", factura.total);
+
+                    return Convert.ToInt32(cmd.ExecuteScalar()); 
+                }
+            }
+        }
+
+        public int AgregarProductoAFactura(ProductosFactura detalle)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = @"INSERT INTO ProductosFactura (id_factura, id_producto, cantidad, subtotal) 
+                         VALUES (@id_factura, @id_producto, @cantidad, @subtotal);";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id_factura", detalle.id_factura);
+                    cmd.Parameters.AddWithValue("@id_producto", detalle.id_producto);
+                    cmd.Parameters.AddWithValue("@cantidad", detalle.cantidad);
+                    cmd.Parameters.AddWithValue("@subtotal", detalle.subtotal);
+
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
     }
 }
 

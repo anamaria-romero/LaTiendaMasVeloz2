@@ -34,13 +34,14 @@
             tbDocumentoCliente = new TextBox();
             btIngresarCliente = new Button();
             lbClienteIngresado = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // lbTituloCliente
             // 
             lbTituloCliente.AutoSize = true;
             lbTituloCliente.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloCliente.Location = new Point(108, 14);
+            lbTituloCliente.Location = new Point(109, 27);
             lbTituloCliente.Name = "lbTituloCliente";
             lbTituloCliente.Size = new Size(128, 32);
             lbTituloCliente.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // tbNombreCliente
             // 
-            tbNombreCliente.Location = new Point(28, 116);
+            tbNombreCliente.Location = new Point(29, 129);
             tbNombreCliente.Name = "tbNombreCliente";
             tbNombreCliente.Size = new Size(291, 23);
             tbNombreCliente.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // tbTelefonoCliente
             // 
-            tbTelefonoCliente.Location = new Point(28, 159);
+            tbTelefonoCliente.Location = new Point(29, 172);
             tbTelefonoCliente.Name = "tbTelefonoCliente";
             tbTelefonoCliente.Size = new Size(291, 23);
             tbTelefonoCliente.TabIndex = 2;
@@ -64,7 +65,7 @@
             // 
             // tbDocumentoCliente
             // 
-            tbDocumentoCliente.Location = new Point(28, 72);
+            tbDocumentoCliente.Location = new Point(29, 85);
             tbDocumentoCliente.Name = "tbDocumentoCliente";
             tbDocumentoCliente.Size = new Size(291, 23);
             tbDocumentoCliente.TabIndex = 3;
@@ -73,7 +74,7 @@
             // btIngresarCliente
             // 
             btIngresarCliente.BackColor = SystemColors.ActiveCaption;
-            btIngresarCliente.Location = new Point(108, 267);
+            btIngresarCliente.Location = new Point(109, 280);
             btIngresarCliente.Name = "btIngresarCliente";
             btIngresarCliente.RightToLeft = RightToLeft.No;
             btIngresarCliente.Size = new Size(128, 51);
@@ -85,17 +86,29 @@
             // lbClienteIngresado
             // 
             lbClienteIngresado.AutoSize = true;
-            lbClienteIngresado.Location = new Point(28, 210);
+            lbClienteIngresado.Location = new Point(29, 223);
             lbClienteIngresado.Name = "lbClienteIngresado";
             lbClienteIngresado.Size = new Size(102, 15);
             lbClienteIngresado.TabIndex = 5;
             lbClienteIngresado.Text = "Cliente Ingresado:";
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 37;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // Cliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(351, 330);
+            ClientSize = new Size(351, 343);
+            Controls.Add(btVolver);
             Controls.Add(lbClienteIngresado);
             Controls.Add(btIngresarCliente);
             Controls.Add(tbDocumentoCliente);
@@ -116,5 +129,6 @@
         private TextBox tbDocumentoCliente;
         private Button btIngresarCliente;
         private Label lbClienteIngresado;
+        private Button btVolver;
     }
 }

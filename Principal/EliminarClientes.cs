@@ -42,5 +42,11 @@ namespace Principal
             }
         }
 
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes menu = new SubMenuClientes();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

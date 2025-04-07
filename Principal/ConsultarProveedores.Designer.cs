@@ -32,12 +32,13 @@
             btConsultar = new Button();
             tbDocumento = new TextBox();
             lbTituloConsultarProveedor = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // lbMostrarProveedor
             // 
             lbMostrarProveedor.AutoSize = true;
-            lbMostrarProveedor.Location = new Point(71, 118);
+            lbMostrarProveedor.Location = new Point(72, 137);
             lbMostrarProveedor.Name = "lbMostrarProveedor";
             lbMostrarProveedor.Size = new Size(64, 15);
             lbMostrarProveedor.TabIndex = 16;
@@ -46,7 +47,7 @@
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(126, 181);
+            btConsultar.Location = new Point(127, 200);
             btConsultar.Name = "btConsultar";
             btConsultar.Size = new Size(127, 49);
             btConsultar.TabIndex = 15;
@@ -56,7 +57,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(71, 76);
+            tbDocumento.Location = new Point(72, 95);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(241, 23);
             tbDocumento.TabIndex = 14;
@@ -66,17 +67,29 @@
             // 
             lbTituloConsultarProveedor.AutoSize = true;
             lbTituloConsultarProveedor.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloConsultarProveedor.Location = new Point(25, 24);
+            lbTituloConsultarProveedor.Location = new Point(26, 43);
             lbTituloConsultarProveedor.Name = "lbTituloConsultarProveedor";
             lbTituloConsultarProveedor.Size = new Size(345, 32);
             lbTituloConsultarProveedor.TabIndex = 13;
             lbTituloConsultarProveedor.Text = "CONSULTAR PROVEEDOR";
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 29;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // ConsultarProveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(391, 245);
+            ClientSize = new Size(391, 261);
+            Controls.Add(btVolver);
             Controls.Add(lbMostrarProveedor);
             Controls.Add(btConsultar);
             Controls.Add(tbDocumento);
@@ -93,5 +106,6 @@
         private Button btConsultar;
         private TextBox tbDocumento;
         private Label lbTituloConsultarProveedor;
+        private Button btVolver;
     }
 }

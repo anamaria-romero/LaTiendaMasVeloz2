@@ -40,5 +40,12 @@ namespace Principal
         private void ConsultarClientes_Load(object sender, EventArgs e) { }
 
         private void lbMostrarCliente_Click(object sender, EventArgs e) { }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes menu = new SubMenuClientes();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

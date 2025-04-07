@@ -64,5 +64,12 @@ namespace Principal
         {
 
         }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuProductos menu = new SubMenuProductos();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

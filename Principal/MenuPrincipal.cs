@@ -19,33 +19,39 @@ namespace Principal
 
         private void btClientes_Click(object sender, EventArgs e)
         {
-            SubMenuClientes subMenu = new SubMenuClientes();
-            subMenu.Show();
+            SubMenuClientes menu = new SubMenuClientes();
+            menu.Show();
+            this.Hide();
+
 
         }
 
         private void btEmpleados_Click(object sender, EventArgs e)
         {
-            SubMenuUsuarios subMenuUsuarios = new SubMenuUsuarios();
-            subMenuUsuarios.Show();
+            SubMenuUsuarios menu = new SubMenuUsuarios();
+            menu.Show();
+            this.Hide();
         }
 
         private void btInventario_Click(object sender, EventArgs e)
         {
-            SubMenuProductos subMenuProductos = new SubMenuProductos();
-            subMenuProductos.Show();
+            SubMenuProductos menu = new SubMenuProductos();
+            menu.Show();
+            this.Hide();
         }
 
         private void btProveedores_Click(object sender, EventArgs e)
         {
-            SubMenuProveedores subMenuProveedores = new SubMenuProveedores();
-            subMenuProveedores.Show();
+            SubMenuProveedores menu = new SubMenuProveedores();
+            menu.Show();
+            this.Hide();
         }
 
         private void btVentas_Click(object sender, EventArgs e)
         {
-            SubMenuVentas subMenuVentas = new SubMenuVentas();
-            subMenuVentas.Show();
+            SubMenuVentas menu = new SubMenuVentas();
+            menu.Show();
+            this.Hide();
         }
     }
 }

@@ -19,12 +19,23 @@ namespace Principal
 
         private void btSubMenuRegistrarVenta_Click(object sender, EventArgs e)
         {
-
+            Fecha menu = new Fecha();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuConsultarVenta_Click(object sender, EventArgs e)
         {
+            ConsultarFactura menu = new ConsultarFactura();
+            menu.Show();
+            this.Hide();
+        }
 
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
         }
     }
 }

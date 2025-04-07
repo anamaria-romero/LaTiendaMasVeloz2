@@ -19,26 +19,37 @@ namespace Principal
 
         private void btSubMenuRegistrarProducto_Click(object sender, EventArgs e)
         {
-            Producto frmProducto = new Producto();
-            frmProducto.Show();
+            Producto menu = new Producto();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuActualizarProducto_Click(object sender, EventArgs e)
         {
-            ActualizarProducto frmActualizar = new ActualizarProducto();
-            frmActualizar.Show();
+            ActualizarProducto menu = new ActualizarProducto();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuConsultarProducto_Click(object sender, EventArgs e)
         {
-            ConsultarProducto frmConsultar = new ConsultarProducto();
-            frmConsultar.Show();
+            ConsultarProducto menu = new ConsultarProducto();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuEliminarProducto_Click(object sender, EventArgs e)
         {
-            EliminarProducto frmEliminar = new EliminarProducto();
-            frmEliminar.Show();
+            EliminarProducto menu = new EliminarProducto();
+            menu.Show();
+            this.Hide();
         }
+        private void btVolver_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
+        }
+
     }
 }

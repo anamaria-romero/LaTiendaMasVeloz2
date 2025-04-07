@@ -19,26 +19,37 @@ namespace Principal
 
         private void btSubMenuRegistrarProveedores_Click(object sender, EventArgs e)
         {
-            Proveedor frmProveedor = new Proveedor();
-            frmProveedor.Show();
+            Proveedor menu = new Proveedor();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuActualizarProveedores_Click(object sender, EventArgs e)
         {
-            ActualizarProveedores frmActualizar = new ActualizarProveedores();
-            frmActualizar.Show();
+            ActualizarProveedores menu = new ActualizarProveedores();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuConsultarProveedores_Click(object sender, EventArgs e)
         {
-            ConsultarProveedores frmConsultar = new ConsultarProveedores();
-            frmConsultar.Show();
+            ConsultarProveedores menu = new ConsultarProveedores();
+            menu.Show();
+            this.Hide();
         }
 
         private void btSubMenuEliminarProveedores_Click(object sender, EventArgs e)
         {
-            EliminarProveedor frmEliminar = new EliminarProveedor();
-            frmEliminar.Show();
+            EliminarProveedor menu = new EliminarProveedor();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Hide();
         }
     }
 }

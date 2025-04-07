@@ -32,12 +32,13 @@
             lbMostrarProveedor = new Label();
             tbDocumento = new TextBox();
             label1 = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btEliminarProveedor
             // 
             btEliminarProveedor.BackColor = SystemColors.ActiveCaption;
-            btEliminarProveedor.Location = new Point(103, 183);
+            btEliminarProveedor.Location = new Point(103, 196);
             btEliminarProveedor.Name = "btEliminarProveedor";
             btEliminarProveedor.Size = new Size(153, 60);
             btEliminarProveedor.TabIndex = 7;
@@ -48,7 +49,7 @@
             // lbMostrarProveedor
             // 
             lbMostrarProveedor.AutoSize = true;
-            lbMostrarProveedor.Location = new Point(41, 128);
+            lbMostrarProveedor.Location = new Point(41, 141);
             lbMostrarProveedor.Name = "lbMostrarProveedor";
             lbMostrarProveedor.Size = new Size(64, 15);
             lbMostrarProveedor.TabIndex = 6;
@@ -57,7 +58,7 @@
             // 
             // tbDocumento
             // 
-            tbDocumento.Location = new Point(41, 80);
+            tbDocumento.Location = new Point(41, 93);
             tbDocumento.Name = "tbDocumento";
             tbDocumento.Size = new Size(287, 23);
             tbDocumento.TabIndex = 5;
@@ -67,17 +68,29 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(26, 30);
+            label1.Location = new Point(26, 43);
             label1.Name = "label1";
             label1.Size = new Size(321, 32);
             label1.TabIndex = 4;
             label1.Text = "Eliminar Proveedor";
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 28;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // EliminarProveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(369, 257);
+            ClientSize = new Size(369, 268);
+            Controls.Add(btVolver);
             Controls.Add(btEliminarProveedor);
             Controls.Add(lbMostrarProveedor);
             Controls.Add(tbDocumento);
@@ -94,5 +107,6 @@
         private Label lbMostrarProveedor;
         private TextBox tbDocumento;
         private Label label1;
+        private Button btVolver;
     }
 }

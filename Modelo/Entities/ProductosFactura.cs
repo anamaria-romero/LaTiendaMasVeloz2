@@ -14,12 +14,6 @@ namespace Modelo.Entities
         public int id_producto { get; set; }
         public int cantidad { get; set; }
         public decimal subtotal { get; set; }
-
-        [ForeignKey("id_factura")]
-        public FacturaEntity Factura { get; set; }
-
-        [ForeignKey("id_producto")]
-        public ProductoEntity Producto { get; set; }
     }
 
 }

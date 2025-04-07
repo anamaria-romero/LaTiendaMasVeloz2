@@ -37,6 +37,7 @@
             tbCantidadProducto = new TextBox();
             tbIngreseProveedor = new TextBox();
             lbProductoRegistrado = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // lbTituloProducto
@@ -119,11 +120,23 @@
             lbProductoRegistrado.Text = "Producto registrado: ";
             lbProductoRegistrado.Click += lbProductoRegistrado_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 31;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // Producto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(553, 326);
+            Controls.Add(btVolver);
             Controls.Add(lbProductoRegistrado);
             Controls.Add(tbIngreseProveedor);
             Controls.Add(btRegistrarProducto);
@@ -150,5 +163,6 @@
         private TextBox tbCantidadProducto;
         private TextBox tbIngreseProveedor;
         private Label lbProductoRegistrado;
+        private Button btVolver;
     }
 }

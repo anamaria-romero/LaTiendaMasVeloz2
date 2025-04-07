@@ -35,12 +35,13 @@
             lbTituloUsuario = new Label();
             cbCargo = new ComboBox();
             lbUsuarioRegistrado = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btIngresarUsuario
             // 
             btIngresarUsuario.BackColor = SystemColors.ActiveCaption;
-            btIngresarUsuario.Location = new Point(140, 281);
+            btIngresarUsuario.Location = new Point(141, 302);
             btIngresarUsuario.Name = "btIngresarUsuario";
             btIngresarUsuario.Size = new Size(110, 46);
             btIngresarUsuario.TabIndex = 9;
@@ -50,7 +51,7 @@
             // 
             // tbContraseñaUsuario
             // 
-            tbContraseñaUsuario.Location = new Point(67, 195);
+            tbContraseñaUsuario.Location = new Point(68, 216);
             tbContraseñaUsuario.Name = "tbContraseñaUsuario";
             tbContraseñaUsuario.Size = new Size(277, 23);
             tbContraseñaUsuario.TabIndex = 8;
@@ -58,7 +59,7 @@
             // 
             // tbNombreUsuario
             // 
-            tbNombreUsuario.Location = new Point(67, 105);
+            tbNombreUsuario.Location = new Point(68, 126);
             tbNombreUsuario.Name = "tbNombreUsuario";
             tbNombreUsuario.Size = new Size(277, 23);
             tbNombreUsuario.TabIndex = 7;
@@ -66,7 +67,7 @@
             // 
             // tbDocumentoUsuario
             // 
-            tbDocumentoUsuario.Location = new Point(67, 61);
+            tbDocumentoUsuario.Location = new Point(68, 82);
             tbDocumentoUsuario.Name = "tbDocumentoUsuario";
             tbDocumentoUsuario.Size = new Size(277, 23);
             tbDocumentoUsuario.TabIndex = 6;
@@ -76,7 +77,7 @@
             // 
             lbTituloUsuario.AutoSize = true;
             lbTituloUsuario.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloUsuario.Location = new Point(140, 9);
+            lbTituloUsuario.Location = new Point(130, 30);
             lbTituloUsuario.Name = "lbTituloUsuario";
             lbTituloUsuario.Size = new Size(136, 32);
             lbTituloUsuario.TabIndex = 5;
@@ -85,7 +86,7 @@
             // cbCargo
             // 
             cbCargo.FormattingEnabled = true;
-            cbCargo.Location = new Point(67, 151);
+            cbCargo.Location = new Point(68, 172);
             cbCargo.Name = "cbCargo";
             cbCargo.Size = new Size(277, 23);
             cbCargo.TabIndex = 10;
@@ -94,18 +95,30 @@
             // lbUsuarioRegistrado
             // 
             lbUsuarioRegistrado.AutoSize = true;
-            lbUsuarioRegistrado.Location = new Point(67, 247);
+            lbUsuarioRegistrado.Location = new Point(68, 268);
             lbUsuarioRegistrado.Name = "lbUsuarioRegistrado";
             lbUsuarioRegistrado.Size = new Size(50, 15);
             lbUsuarioRegistrado.TabIndex = 11;
             lbUsuarioRegistrado.Text = "Usuario:";
             lbUsuarioRegistrado.Click += lbUsuarioRegistrado_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 17;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // Usuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(410, 339);
+            ClientSize = new Size(410, 360);
+            Controls.Add(btVolver);
             Controls.Add(lbUsuarioRegistrado);
             Controls.Add(cbCargo);
             Controls.Add(btIngresarUsuario);
@@ -128,5 +141,6 @@
         private Label lbTituloUsuario;
         private ComboBox cbCargo;
         private Label lbUsuarioRegistrado;
+        private Button btVolver;
     }
 }

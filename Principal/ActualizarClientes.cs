@@ -91,5 +91,12 @@ namespace Principal
         private void tbActualizarTelefono_TextChanged(object sender, EventArgs e) { }
 
         private void lbClienteActualizado_Click(object sender, EventArgs e) { }
+
+        private void btVolver_Click(object sender, EventArgs e)
+        {
+            SubMenuClientes menu = new SubMenuClientes();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

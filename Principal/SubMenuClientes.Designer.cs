@@ -33,6 +33,7 @@
             btSubMenuActualizarCliente = new Button();
             btSubMenuConsultarCliente = new Button();
             btSubMenuEliminarCliente = new Button();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // lbTituloSubMenuClientes
@@ -40,7 +41,7 @@
             lbTituloSubMenuClientes.AutoSize = true;
             lbTituloSubMenuClientes.BackColor = Color.Snow;
             lbTituloSubMenuClientes.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuClientes.Location = new Point(33, 30);
+            lbTituloSubMenuClientes.Location = new Point(32, 52);
             lbTituloSubMenuClientes.Name = "lbTituloSubMenuClientes";
             lbTituloSubMenuClientes.Size = new Size(283, 32);
             lbTituloSubMenuClientes.TabIndex = 0;
@@ -49,7 +50,7 @@
             // btSubMenuRegistrarCliente
             // 
             btSubMenuRegistrarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarCliente.Location = new Point(45, 86);
+            btSubMenuRegistrarCliente.Location = new Point(44, 108);
             btSubMenuRegistrarCliente.Name = "btSubMenuRegistrarCliente";
             btSubMenuRegistrarCliente.Size = new Size(116, 53);
             btSubMenuRegistrarCliente.TabIndex = 1;
@@ -60,7 +61,7 @@
             // btSubMenuActualizarCliente
             // 
             btSubMenuActualizarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuActualizarCliente.Location = new Point(200, 86);
+            btSubMenuActualizarCliente.Location = new Point(199, 108);
             btSubMenuActualizarCliente.Name = "btSubMenuActualizarCliente";
             btSubMenuActualizarCliente.Size = new Size(116, 53);
             btSubMenuActualizarCliente.TabIndex = 2;
@@ -71,7 +72,7 @@
             // btSubMenuConsultarCliente
             // 
             btSubMenuConsultarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarCliente.Location = new Point(45, 171);
+            btSubMenuConsultarCliente.Location = new Point(44, 193);
             btSubMenuConsultarCliente.Name = "btSubMenuConsultarCliente";
             btSubMenuConsultarCliente.Size = new Size(116, 53);
             btSubMenuConsultarCliente.TabIndex = 3;
@@ -82,7 +83,7 @@
             // btSubMenuEliminarCliente
             // 
             btSubMenuEliminarCliente.BackColor = SystemColors.ActiveCaption;
-            btSubMenuEliminarCliente.Location = new Point(200, 171);
+            btSubMenuEliminarCliente.Location = new Point(199, 193);
             btSubMenuEliminarCliente.Name = "btSubMenuEliminarCliente";
             btSubMenuEliminarCliente.Size = new Size(116, 53);
             btSubMenuEliminarCliente.TabIndex = 4;
@@ -90,11 +91,23 @@
             btSubMenuEliminarCliente.UseVisualStyleBackColor = false;
             btSubMenuEliminarCliente.Click += btSubMenuEliminarCliente_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 5;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // SubMenuClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(360, 260);
+            ClientSize = new Size(360, 269);
+            Controls.Add(btVolver);
             Controls.Add(btSubMenuEliminarCliente);
             Controls.Add(btSubMenuConsultarCliente);
             Controls.Add(btSubMenuActualizarCliente);
@@ -113,5 +126,6 @@
         private Button btSubMenuActualizarCliente;
         private Button btSubMenuConsultarCliente;
         private Button btSubMenuEliminarCliente;
+        private Button btVolver;
     }
 }

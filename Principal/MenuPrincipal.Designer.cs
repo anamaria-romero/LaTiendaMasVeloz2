@@ -33,8 +33,8 @@
             btInventario = new Button();
             btUsuarios = new Button();
             btClientes = new Button();
-            lbTituloPagina = new Label();
             lbTituloMenu = new Label();
+            lbTituloPagina = new Label();
             SuspendLayout();
             // 
             // btVentas
@@ -92,16 +92,6 @@
             btClientes.UseVisualStyleBackColor = false;
             btClientes.Click += btClientes_Click;
             // 
-            // lbTituloPagina
-            // 
-            lbTituloPagina.AutoSize = true;
-            lbTituloPagina.Font = new Font("Snap ITC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbTituloPagina.Location = new Point(12, 25);
-            lbTituloPagina.Name = "lbTituloPagina";
-            lbTituloPagina.Size = new Size(434, 37);
-            lbTituloPagina.TabIndex = 8;
-            lbTituloPagina.Text = "LA TIENDA MAS VELOZ";
-            // 
             // lbTituloMenu
             // 
             lbTituloMenu.AutoSize = true;
@@ -111,6 +101,16 @@
             lbTituloMenu.Size = new Size(223, 29);
             lbTituloMenu.TabIndex = 7;
             lbTituloMenu.Text = "MENU PRINCIPAL";
+            // 
+            // lbTituloPagina
+            // 
+            lbTituloPagina.AutoSize = true;
+            lbTituloPagina.Font = new Font("Snap ITC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbTituloPagina.Location = new Point(12, 25);
+            lbTituloPagina.Name = "lbTituloPagina";
+            lbTituloPagina.Size = new Size(434, 37);
+            lbTituloPagina.TabIndex = 8;
+            lbTituloPagina.Text = "LA TIENDA MAS VELOZ";
             // 
             // MenuPrincipal
             // 
@@ -137,7 +137,7 @@
         private Button btInventario;
         private Button btUsuarios;
         private Button btClientes;
-        private Label lbTituloPagina;
         private Label lbTituloMenu;
+        private Label lbTituloPagina;
     }
 }

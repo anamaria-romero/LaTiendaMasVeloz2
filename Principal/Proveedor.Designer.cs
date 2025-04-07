@@ -34,13 +34,14 @@
             tbTelefonoProveedor = new TextBox();
             btIngresarProveedor = new Button();
             label1 = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // lbTituloProveedor
             // 
             lbTituloProveedor.AutoSize = true;
             lbTituloProveedor.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloProveedor.Location = new Point(89, 13);
+            lbTituloProveedor.Location = new Point(89, 27);
             lbTituloProveedor.Name = "lbTituloProveedor";
             lbTituloProveedor.Size = new Size(178, 32);
             lbTituloProveedor.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // tbDocumentoProveedor
             // 
-            tbDocumentoProveedor.Location = new Point(41, 65);
+            tbDocumentoProveedor.Location = new Point(41, 79);
             tbDocumentoProveedor.Name = "tbDocumentoProveedor";
             tbDocumentoProveedor.Size = new Size(277, 23);
             tbDocumentoProveedor.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // tbNombreProveedor
             // 
-            tbNombreProveedor.Location = new Point(41, 119);
+            tbNombreProveedor.Location = new Point(41, 133);
             tbNombreProveedor.Name = "tbNombreProveedor";
             tbNombreProveedor.Size = new Size(277, 23);
             tbNombreProveedor.TabIndex = 2;
@@ -64,7 +65,7 @@
             // 
             // tbTelefonoProveedor
             // 
-            tbTelefonoProveedor.Location = new Point(41, 174);
+            tbTelefonoProveedor.Location = new Point(41, 188);
             tbTelefonoProveedor.Name = "tbTelefonoProveedor";
             tbTelefonoProveedor.Size = new Size(277, 23);
             tbTelefonoProveedor.TabIndex = 3;
@@ -73,7 +74,7 @@
             // btIngresarProveedor
             // 
             btIngresarProveedor.BackColor = SystemColors.ActiveCaption;
-            btIngresarProveedor.Location = new Point(118, 279);
+            btIngresarProveedor.Location = new Point(118, 293);
             btIngresarProveedor.Name = "btIngresarProveedor";
             btIngresarProveedor.Size = new Size(117, 48);
             btIngresarProveedor.TabIndex = 4;
@@ -84,18 +85,30 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 226);
+            label1.Location = new Point(41, 240);
             label1.Name = "label1";
             label1.Size = new Size(120, 15);
             label1.TabIndex = 5;
             label1.Text = "Proveedor registrado:";
             label1.Click += label1_Click;
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 27;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // Proveedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(376, 339);
+            ClientSize = new Size(376, 353);
+            Controls.Add(btVolver);
             Controls.Add(label1);
             Controls.Add(btIngresarProveedor);
             Controls.Add(tbTelefonoProveedor);
@@ -117,5 +130,6 @@
         private TextBox tbTelefonoProveedor;
         private Button btIngresarProveedor;
         private Label label1;
+        private Button btVolver;
     }
 }

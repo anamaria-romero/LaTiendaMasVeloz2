@@ -33,12 +33,13 @@
             btSubMenuActualizarUsuario = new Button();
             btSubMenuRegistrarUsuario = new Button();
             lbTituloSubMenuUsuarios = new Label();
+            btVolver = new Button();
             SuspendLayout();
             // 
             // btSubMenuEliminarUsuario
             // 
             btSubMenuEliminarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuEliminarUsuario.Location = new Point(193, 177);
+            btSubMenuEliminarUsuario.Location = new Point(195, 191);
             btSubMenuEliminarUsuario.Name = "btSubMenuEliminarUsuario";
             btSubMenuEliminarUsuario.Size = new Size(116, 53);
             btSubMenuEliminarUsuario.TabIndex = 9;
@@ -49,7 +50,7 @@
             // btSubMenuConsultarUsuario
             // 
             btSubMenuConsultarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuConsultarUsuario.Location = new Point(51, 177);
+            btSubMenuConsultarUsuario.Location = new Point(53, 191);
             btSubMenuConsultarUsuario.Name = "btSubMenuConsultarUsuario";
             btSubMenuConsultarUsuario.Size = new Size(116, 53);
             btSubMenuConsultarUsuario.TabIndex = 8;
@@ -60,7 +61,7 @@
             // btSubMenuActualizarUsuario
             // 
             btSubMenuActualizarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuActualizarUsuario.Location = new Point(193, 92);
+            btSubMenuActualizarUsuario.Location = new Point(195, 106);
             btSubMenuActualizarUsuario.Name = "btSubMenuActualizarUsuario";
             btSubMenuActualizarUsuario.Size = new Size(116, 53);
             btSubMenuActualizarUsuario.TabIndex = 7;
@@ -71,7 +72,7 @@
             // btSubMenuRegistrarUsuario
             // 
             btSubMenuRegistrarUsuario.BackColor = SystemColors.ActiveCaption;
-            btSubMenuRegistrarUsuario.Location = new Point(51, 92);
+            btSubMenuRegistrarUsuario.Location = new Point(53, 106);
             btSubMenuRegistrarUsuario.Name = "btSubMenuRegistrarUsuario";
             btSubMenuRegistrarUsuario.Size = new Size(116, 53);
             btSubMenuRegistrarUsuario.TabIndex = 6;
@@ -84,17 +85,29 @@
             lbTituloSubMenuUsuarios.AutoSize = true;
             lbTituloSubMenuUsuarios.BackColor = Color.Snow;
             lbTituloSubMenuUsuarios.Font = new Font("Stencil", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbTituloSubMenuUsuarios.Location = new Point(31, 32);
+            lbTituloSubMenuUsuarios.Location = new Point(33, 46);
             lbTituloSubMenuUsuarios.Name = "lbTituloSubMenuUsuarios";
             lbTituloSubMenuUsuarios.Size = new Size(291, 32);
             lbTituloSubMenuUsuarios.TabIndex = 5;
             lbTituloSubMenuUsuarios.Text = "SUBMENU USUARIOS";
             // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 10;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
             // SubMenuUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(358, 280);
+            ClientSize = new Size(358, 264);
+            Controls.Add(btVolver);
             Controls.Add(btSubMenuEliminarUsuario);
             Controls.Add(btSubMenuConsultarUsuario);
             Controls.Add(btSubMenuActualizarUsuario);
@@ -113,5 +126,6 @@
         private Button btSubMenuActualizarUsuario;
         private Button btSubMenuRegistrarUsuario;
         private Label lbTituloSubMenuUsuarios;
+        private Button btVolver;
     }
 }
