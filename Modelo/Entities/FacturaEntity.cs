@@ -12,7 +12,7 @@ namespace Modelo.Entities
     {
         public int id { get; set; }
         public int id_cliente { get; set; }
-        public int id_empleado { get; set; }
+        public int id_usuario { get; set; }
         public decimal total { get; set; }
         public DateTime fecha { get; set; } = DateTime.Now;
     }

@@ -28,27 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lbMostrarFactura = new Label();
             btConsultar = new Button();
             tbIdentificadorFactura = new TextBox();
             lbTituloConsultarFactura = new Label();
             btVolver = new Button();
+            LinkFacturaPDF = new LinkLabel();
             SuspendLayout();
-            // 
-            // lbMostrarFactura
-            // 
-            lbMostrarFactura.AutoSize = true;
-            lbMostrarFactura.Location = new Point(53, 143);
-            lbMostrarFactura.Name = "lbMostrarFactura";
-            lbMostrarFactura.Size = new Size(49, 15);
-            lbMostrarFactura.TabIndex = 16;
-            lbMostrarFactura.Text = "Factura:";
-            lbMostrarFactura.Click += lbMostrarFactura_Click;
             // 
             // btConsultar
             // 
             btConsultar.BackColor = SystemColors.ActiveCaption;
-            btConsultar.Location = new Point(99, 294);
+            btConsultar.Location = new Point(103, 187);
             btConsultar.Name = "btConsultar";
             btConsultar.Size = new Size(127, 49);
             btConsultar.TabIndex = 15;
@@ -63,7 +53,6 @@
             tbIdentificadorFactura.Size = new Size(241, 23);
             tbIdentificadorFactura.TabIndex = 14;
             tbIdentificadorFactura.Text = "Ingresar Identificador";
-            tbIdentificadorFactura.TextChanged += tbIdentificadorFactura_TextChanged;
             // 
             // lbTituloConsultarFactura
             // 
@@ -86,13 +75,24 @@
             btVolver.UseVisualStyleBackColor = false;
             btVolver.Click += btVolver_Click;
             // 
+            // LinkFacturaPDF
+            // 
+            LinkFacturaPDF.AutoSize = true;
+            LinkFacturaPDF.Location = new Point(103, 146);
+            LinkFacturaPDF.Name = "LinkFacturaPDF";
+            LinkFacturaPDF.Size = new Size(46, 15);
+            LinkFacturaPDF.TabIndex = 37;
+            LinkFacturaPDF.TabStop = true;
+            LinkFacturaPDF.Text = "Factura";
+            LinkFacturaPDF.LinkClicked += LinkFacturaPDF_LinkClicked;
+            // 
             // ConsultarFactura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(354, 355);
+            ClientSize = new Size(354, 248);
+            Controls.Add(LinkFacturaPDF);
             Controls.Add(btVolver);
-            Controls.Add(lbMostrarFactura);
             Controls.Add(btConsultar);
             Controls.Add(tbIdentificadorFactura);
             Controls.Add(lbTituloConsultarFactura);
@@ -103,11 +103,10 @@
         }
 
         #endregion
-
-        private Label lbMostrarFactura;
         private Button btConsultar;
         private TextBox tbIdentificadorFactura;
         private Label lbTituloConsultarFactura;
         private Button btVolver;
+        private LinkLabel LinkFacturaPDF;
     }
 }

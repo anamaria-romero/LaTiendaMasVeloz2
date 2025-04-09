@@ -62,15 +62,18 @@ namespace Principal
             {
                 MessageBox.Show("Inicio de sesión exitoso", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                Sesion.RolUsuario = usuario.rol.ToString();
+
                 MenuPrincipal menu = new MenuPrincipal();
                 menu.Show();
                 this.Hide();
             }
-
             else
-                {
+            {
                 MessageBox.Show("Contraseña o cargo incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
+

@@ -100,6 +100,11 @@ namespace Principal
             menu.Show();
             this.Hide();
         }
+
+        private void cbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public static class EnumHelper

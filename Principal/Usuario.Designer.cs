@@ -91,6 +91,7 @@
             cbCargo.Size = new Size(277, 23);
             cbCargo.TabIndex = 10;
             cbCargo.Text = "Elije el cargo";
+            cbCargo.SelectedIndexChanged += cbCargo_SelectedIndexChanged;
             // 
             // lbUsuarioRegistrado
             // 

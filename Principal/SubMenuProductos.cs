@@ -44,12 +44,20 @@ namespace Principal
             menu.Show();
             this.Hide();
         }
+
+
+
+
+        private void lbTituloSubMenuProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btVolver_Click_1(object sender, EventArgs e)
         {
             MenuPrincipal menu = new MenuPrincipal();
             menu.Show();
             this.Hide();
         }
-
     }
 }

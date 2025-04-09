@@ -23,7 +23,7 @@ namespace Principal
 
             if (proveedor != null)
             {
-                lbMostrarProveedor.Text = $"Proveedor: {proveedor.nombre}, Teléfono: {proveedor.telefono}, Documento: {proveedor.documento}";
+                lbMostrarProveedor.Text = $"Proveedor: {proveedor.nombre},\n Teléfono: {proveedor.telefono}, Documento: {proveedor.documento}";
             }
             else
             {

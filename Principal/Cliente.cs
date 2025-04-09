@@ -22,7 +22,7 @@ namespace Principal
 
             MessageBox.Show(mensaje);
 
-            lbClienteIngresado.Text = $"Cliente: {nombre}, Teléfono: {telefono}, Documento: {documento}";
+            lbClienteIngresado.Text = $"Cliente: {nombre},\nTeléfono: {telefono}, Documento: {documento}";
         }
 
         private void btVolver_Click(object sender, EventArgs e)
@@ -30,6 +30,11 @@ namespace Principal
             SubMenuClientes menu = new SubMenuClientes();
             menu.Show();
             this.Hide();
+        }
+
+        private void lbClienteIngresado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

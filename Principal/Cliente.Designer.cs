@@ -91,6 +91,7 @@
             lbClienteIngresado.Size = new Size(102, 15);
             lbClienteIngresado.TabIndex = 5;
             lbClienteIngresado.Text = "Cliente Ingresado:";
+            lbClienteIngresado.Click += lbClienteIngresado_Click;
             // 
             // btVolver
             // 

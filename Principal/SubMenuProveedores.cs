@@ -47,9 +47,11 @@ namespace Principal
 
         private void btVolver_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
+            MenuPrincipal menu = new MenuPrincipal(); 
             menu.Show();
             this.Hide();
         }
+
+
     }
 }

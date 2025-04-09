@@ -90,6 +90,7 @@
             lbTituloSubMenuProductos.Size = new Size(315, 32);
             lbTituloSubMenuProductos.TabIndex = 5;
             lbTituloSubMenuProductos.Text = "SUBMENU PRODUCTOS";
+            lbTituloSubMenuProductos.Click += lbTituloSubMenuProductos_Click;
             // 
             // btVolver
             // 

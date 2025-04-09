@@ -49,7 +49,7 @@ namespace Principal
                 ClienteEntity clienteActualizado = clienteController.ConsultarCliente(documento);
                 if (clienteActualizado != null)
                 {
-                    lbClienteActualizado.Text = $"Cliente actualizado: {clienteActualizado.nombre}, Teléfono: {clienteActualizado.telefono}";
+                    lbClienteActualizado.Text = $"Cliente actualizado: {clienteActualizado.nombre},\n Teléfono: {clienteActualizado.telefono}";
                 }
             }
         }

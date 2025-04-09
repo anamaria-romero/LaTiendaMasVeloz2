@@ -36,10 +36,12 @@
             lbCantidad = new Label();
             tbIdProducto = new TextBox();
             tbIdProveedor = new TextBox();
-            tb = new TextBox();
-            textBox1 = new TextBox();
+            tbPrecio = new TextBox();
+            tbCantidad = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             btRegistrar = new Button();
+            btVolver = new Button();
+            lbProductoProveedorRegistrado = new Label();
             SuspendLayout();
             // 
             // lbTituloProveedor
@@ -64,7 +66,7 @@
             // lbProveedor
             // 
             lbProveedor.AutoSize = true;
-            lbProveedor.Location = new Point(9, 153);
+            lbProveedor.Location = new Point(11, 162);
             lbProveedor.Name = "lbProveedor";
             lbProveedor.Size = new Size(77, 15);
             lbProveedor.TabIndex = 3;
@@ -73,7 +75,7 @@
             // lbFechaIngreso
             // 
             lbFechaIngreso.AutoSize = true;
-            lbFechaIngreso.Location = new Point(9, 100);
+            lbFechaIngreso.Location = new Point(9, 98);
             lbFechaIngreso.Name = "lbFechaIngreso";
             lbFechaIngreso.Size = new Size(83, 15);
             lbFechaIngreso.TabIndex = 4;
@@ -82,7 +84,7 @@
             // lbPrecio
             // 
             lbPrecio.AutoSize = true;
-            lbPrecio.Location = new Point(9, 182);
+            lbPrecio.Location = new Point(11, 191);
             lbPrecio.Name = "lbPrecio";
             lbPrecio.Size = new Size(43, 15);
             lbPrecio.TabIndex = 5;
@@ -91,7 +93,7 @@
             // lbCantidad
             // 
             lbCantidad.AutoSize = true;
-            lbCantidad.Location = new Point(9, 211);
+            lbCantidad.Location = new Point(11, 220);
             lbCantidad.Name = "lbCantidad";
             lbCantidad.Size = new Size(58, 15);
             lbCantidad.TabIndex = 6;
@@ -99,35 +101,35 @@
             // 
             // tbIdProducto
             // 
-            tbIdProducto.Location = new Point(105, 121);
+            tbIdProducto.Location = new Point(125, 121);
             tbIdProducto.Name = "tbIdProducto";
             tbIdProducto.Size = new Size(174, 23);
             tbIdProducto.TabIndex = 7;
             // 
             // tbIdProveedor
             // 
-            tbIdProveedor.Location = new Point(105, 150);
+            tbIdProveedor.Location = new Point(127, 159);
             tbIdProveedor.Name = "tbIdProveedor";
             tbIdProveedor.Size = new Size(174, 23);
             tbIdProveedor.TabIndex = 8;
             // 
-            // tb
+            // tbPrecio
             // 
-            tb.Location = new Point(105, 179);
-            tb.Name = "tb";
-            tb.Size = new Size(174, 23);
-            tb.TabIndex = 9;
+            tbPrecio.Location = new Point(127, 188);
+            tbPrecio.Name = "tbPrecio";
+            tbPrecio.Size = new Size(174, 23);
+            tbPrecio.TabIndex = 9;
             // 
-            // textBox1
+            // tbCantidad
             // 
-            textBox1.Location = new Point(105, 208);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(174, 23);
-            textBox1.TabIndex = 10;
+            tbCantidad.Location = new Point(127, 217);
+            tbCantidad.Name = "tbCantidad";
+            tbCantidad.Size = new Size(174, 23);
+            tbCantidad.TabIndex = 10;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(105, 92);
+            dateTimePicker1.Location = new Point(125, 92);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(230, 23);
             dateTimePicker1.TabIndex = 11;
@@ -135,22 +137,45 @@
             // btRegistrar
             // 
             btRegistrar.BackColor = SystemColors.ActiveCaption;
-            btRegistrar.Location = new Point(144, 262);
+            btRegistrar.Location = new Point(155, 364);
             btRegistrar.Name = "btRegistrar";
             btRegistrar.Size = new Size(155, 44);
             btRegistrar.TabIndex = 12;
             btRegistrar.Text = "REGISTRAR INGRESO";
             btRegistrar.UseVisualStyleBackColor = false;
+            btRegistrar.Click += btRegistrar_Click;
+            // 
+            // btVolver
+            // 
+            btVolver.BackColor = SystemColors.GradientInactiveCaption;
+            btVolver.Location = new Point(12, 12);
+            btVolver.Name = "btVolver";
+            btVolver.Size = new Size(56, 24);
+            btVolver.TabIndex = 17;
+            btVolver.Text = "Volver";
+            btVolver.UseVisualStyleBackColor = false;
+            btVolver.Click += btVolver_Click;
+            // 
+            // lbProductoProveedorRegistrado
+            // 
+            lbProductoProveedorRegistrado.AutoSize = true;
+            lbProductoProveedorRegistrado.Location = new Point(12, 267);
+            lbProductoProveedorRegistrado.Name = "lbProductoProveedorRegistrado";
+            lbProductoProveedorRegistrado.Size = new Size(118, 15);
+            lbProductoProveedorRegistrado.TabIndex = 20;
+            lbProductoProveedorRegistrado.Text = "Producto Registrado:";
             // 
             // RegistrarIngreso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(462, 318);
+            ClientSize = new Size(462, 417);
+            Controls.Add(lbProductoProveedorRegistrado);
+            Controls.Add(btVolver);
             Controls.Add(btRegistrar);
             Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
-            Controls.Add(tb);
+            Controls.Add(tbCantidad);
+            Controls.Add(tbPrecio);
             Controls.Add(tbIdProveedor);
             Controls.Add(tbIdProducto);
             Controls.Add(lbCantidad);
@@ -175,9 +200,11 @@
         private Label lbCantidad;
         private TextBox tbIdProducto;
         private TextBox tbIdProveedor;
-        private TextBox tb;
-        private TextBox textBox1;
+        private TextBox tbPrecio;
+        private TextBox tbCantidad;
         private DateTimePicker dateTimePicker1;
         private Button btRegistrar;
+        private Button btVolver;
+        private Label lbProductoProveedorRegistrado;
     }
 }

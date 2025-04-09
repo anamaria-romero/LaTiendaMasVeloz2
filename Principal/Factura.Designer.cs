@@ -47,8 +47,6 @@
             tbIdCliente = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             lbTotalpagarFactura = new Label();
-            lbSignoPrecioFactura = new Label();
-            lbNumeroTotalFactura = new Label();
             panel1 = new Panel();
             tbEfectivoFactura = new TextBox();
             label4 = new Label();
@@ -89,7 +87,6 @@
             lbIdCliente.Size = new Size(65, 17);
             lbIdCliente.TabIndex = 2;
             lbIdCliente.Text = "Id Cliente:";
-            lbIdCliente.Click += lbIdCliente_Click;
             // 
             // lbIdEmpleado
             // 
@@ -151,7 +148,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(528, 132);
             dataGridView1.TabIndex = 8;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
@@ -181,7 +177,6 @@
             tbIdArticulo.Name = "tbIdArticulo";
             tbIdArticulo.Size = new Size(163, 23);
             tbIdArticulo.TabIndex = 10;
-            tbIdArticulo.TextChanged += tbIdArticulo_TextChanged;
             // 
             // tbTotal
             // 
@@ -189,7 +184,6 @@
             tbTotal.Name = "tbTotal";
             tbTotal.Size = new Size(163, 23);
             tbTotal.TabIndex = 11;
-            tbTotal.TextChanged += tbTotal_TextChanged;
             // 
             // tbIdEmpleado
             // 
@@ -197,7 +191,6 @@
             tbIdEmpleado.Name = "tbIdEmpleado";
             tbIdEmpleado.Size = new Size(163, 23);
             tbIdEmpleado.TabIndex = 12;
-            tbIdEmpleado.TextChanged += tbIdEmpleado_TextChanged;
             // 
             // tbIdCliente
             // 
@@ -205,7 +198,6 @@
             tbIdCliente.Name = "tbIdCliente";
             tbIdCliente.Size = new Size(163, 23);
             tbIdCliente.TabIndex = 13;
-            tbIdCliente.TextChanged += tbIdCliente_TextChanged;
             // 
             // dateTimePicker1
             // 
@@ -213,43 +205,21 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(228, 23);
             dateTimePicker1.TabIndex = 14;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // lbTotalpagarFactura
             // 
             lbTotalpagarFactura.AutoSize = true;
             lbTotalpagarFactura.Font = new Font("Segoe UI", 10F);
-            lbTotalpagarFactura.Location = new Point(474, 78);
+            lbTotalpagarFactura.Location = new Point(18, 12);
             lbTotalpagarFactura.Name = "lbTotalpagarFactura";
-            lbTotalpagarFactura.Size = new Size(91, 19);
+            lbTotalpagarFactura.Size = new Size(88, 19);
             lbTotalpagarFactura.TabIndex = 15;
-            lbTotalpagarFactura.Text = "Total a pagar:";
-            lbTotalpagarFactura.Click += lbTotalpagarFactura_Click;
-            // 
-            // lbSignoPrecioFactura
-            // 
-            lbSignoPrecioFactura.AutoSize = true;
-            lbSignoPrecioFactura.Location = new Point(12, 13);
-            lbSignoPrecioFactura.Name = "lbSignoPrecioFactura";
-            lbSignoPrecioFactura.Size = new Size(13, 15);
-            lbSignoPrecioFactura.TabIndex = 16;
-            lbSignoPrecioFactura.Text = "$";
-            // 
-            // lbNumeroTotalFactura
-            // 
-            lbNumeroTotalFactura.AutoSize = true;
-            lbNumeroTotalFactura.Location = new Point(21, 13);
-            lbNumeroTotalFactura.Name = "lbNumeroTotalFactura";
-            lbNumeroTotalFactura.Size = new Size(31, 15);
-            lbNumeroTotalFactura.TabIndex = 17;
-            lbNumeroTotalFactura.Text = "0000";
-            lbNumeroTotalFactura.Click += lbNumeroTotalFactura_Click;
+            lbTotalpagarFactura.Text = "Total a pagar";
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
-            panel1.Controls.Add(lbNumeroTotalFactura);
-            panel1.Controls.Add(lbSignoPrecioFactura);
+            panel1.Controls.Add(lbTotalpagarFactura);
             panel1.Location = new Point(453, 100);
             panel1.Name = "panel1";
             panel1.Size = new Size(124, 41);
@@ -261,7 +231,6 @@
             tbEfectivoFactura.Name = "tbEfectivoFactura";
             tbEfectivoFactura.Size = new Size(124, 23);
             tbEfectivoFactura.TabIndex = 22;
-            tbEfectivoFactura.TextChanged += tbEfectivoFactura_TextChanged;
             // 
             // label4
             // 
@@ -299,7 +268,6 @@
             tbCantidad.Name = "tbCantidad";
             tbCantidad.Size = new Size(163, 23);
             tbCantidad.TabIndex = 25;
-            tbCantidad.TextChanged += tbCantidad_TextChanged;
             // 
             // btVolver
             // 
@@ -324,7 +292,6 @@
             Controls.Add(tbEfectivoFactura);
             Controls.Add(label4);
             Controls.Add(panel1);
-            Controls.Add(lbTotalpagarFactura);
             Controls.Add(dateTimePicker1);
             Controls.Add(tbIdCliente);
             Controls.Add(tbIdEmpleado);
@@ -365,8 +332,6 @@
         private TextBox tbIdCliente;
         private DateTimePicker dateTimePicker1;
         private Label lbTotalpagarFactura;
-        private Label lbSignoPrecioFactura;
-        private Label lbNumeroTotalFactura;
         private Panel panel1;
         private TextBox tbEfectivoFactura;
         private Label label4;

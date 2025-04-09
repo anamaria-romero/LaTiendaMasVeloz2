@@ -312,25 +312,123 @@ namespace Logica
             }
         }
 
+        public int GuardarProductoProveedor(ProductoProveedor productoProveedor)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                using (MySqlCommand cmd = conexion.CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO ProductoProveedor (id_producto, id_proveedor, fecha_ingreso, precio_compra, cantidad) " +
+                                      "VALUES (@id_producto, @id_proveedor, @fecha_ingreso, @precio_compra, @cantidad)";
+                    cmd.Parameters.AddWithValue("@id_producto", productoProveedor.IdProducto);
+                    cmd.Parameters.AddWithValue("@id_proveedor", productoProveedor.IdProveedor);
+                    cmd.Parameters.AddWithValue("@fecha_ingreso", productoProveedor.FechaIngreso);
+                    cmd.Parameters.AddWithValue("@precio_compra", productoProveedor.PrecioCompra);
+                    cmd.Parameters.AddWithValue("@cantidad", productoProveedor.Cantidad);
+
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public ProductoProveedor MostrarProductoProveedor(int id)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT id, id_producto, id_proveedor, fecha_ingreso, precio_compra, cantidad FROM ProductoProveedor WHERE id = @id";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new ProductoProveedor
+                            {
+                                Id = reader.GetInt32("id"),
+                                IdProducto = reader.GetInt32("id_producto"),
+                                IdProveedor = reader.GetInt32("id_proveedor"),
+                                FechaIngreso = reader.GetDateTime("fecha_ingreso"),
+                                PrecioCompra = reader.GetDecimal("precio_compra"),
+                                Cantidad = reader.GetInt32("cantidad")
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+
+        public int ActualizarProductoProveedor(ProductoProveedor productoProveedor)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = @"UPDATE ProductoProveedor 
+                         SET id_producto = @id_producto, 
+                             id_proveedor = @id_proveedor, 
+                             fecha_ingreso = @fecha_ingreso, 
+                             precio_compra = @precio_compra, 
+                             cantidad = @cantidad 
+                         WHERE id = @id";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", productoProveedor.Id);
+                    cmd.Parameters.AddWithValue("@id_producto", productoProveedor.IdProducto);
+                    cmd.Parameters.AddWithValue("@id_proveedor", productoProveedor.IdProveedor);
+                    cmd.Parameters.AddWithValue("@fecha_ingreso", productoProveedor.FechaIngreso);
+                    cmd.Parameters.AddWithValue("@precio_compra", productoProveedor.PrecioCompra);
+                    cmd.Parameters.AddWithValue("@cantidad", productoProveedor.Cantidad);
+
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public int EliminarProductoProveedor(int id)
+{
+    using (MySqlConnection conexion = GetConnection())
+    {
+        conexion.Open();
+        string query = "DELETE FROM ProductoProveedor WHERE id = @id";
+
+        using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+        {
+            cmd.Parameters.AddWithValue("@id", id);
+            return cmd.ExecuteNonQuery();
+        }
+    }
+}
+
+
         public int CrearFactura(FacturaEntity factura)
         {
             using (MySqlConnection conexion = GetConnection())
             {
                 conexion.Open();
-                string query = @"INSERT INTO FacturaEntity (id_cliente, id_empleado, total) 
-                         VALUES (@id_cliente, @id_empleado, @total);
+                string query = @"INSERT INTO FacturaEntity (id_cliente, id_usuario, total) 
+                         VALUES (@id_cliente, @id_usuario, @total);
                          SELECT LAST_INSERT_ID();";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                 {
                     cmd.Parameters.AddWithValue("@id_cliente", factura.id_cliente);
-                    cmd.Parameters.AddWithValue("@id_empleado", factura.id_empleado);
+                    cmd.Parameters.AddWithValue("@id_usuario", factura.id_usuario); 
                     cmd.Parameters.AddWithValue("@total", factura.total);
 
-                    return Convert.ToInt32(cmd.ExecuteScalar()); 
+                    return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
         }
+
 
         public int AgregarProductoAFactura(ProductosFactura detalle)
         {
@@ -350,6 +448,101 @@ namespace Logica
                     return cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        public string ObtenerNombreCliente(int idCliente)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT nombre FROM ClienteEntity WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", idCliente);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                            return reader.GetString("nombre");
+                    }
+                }
+            }
+            return "Cliente desconocido";
+        }
+
+        public string ObtenerNombreEmpleado(int idEmpleado)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT nombre FROM UsuarioEntity WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", idEmpleado);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                            return reader.GetString("nombre");
+                    }
+                }
+            }
+            return "Empleado desconocido";
+        }
+
+        public FacturaEntity ConsultarFacturaPorId(int id)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT * FROM FacturaEntity WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new FacturaEntity
+                            {
+                                id = reader.GetInt32("id"),
+                                id_cliente = reader.GetInt32("id_cliente"),
+                                id_usuario = reader.GetInt32("id_usuario"),
+                                total = reader.GetDecimal("total"),
+                                fecha = reader.GetDateTime("fecha")
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public List<ProductosFactura> ConsultarProductosPorFactura(int idFactura)
+        {
+            List<ProductosFactura> lista = new List<ProductosFactura>();
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT * FROM ProductosFactura WHERE id_factura = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", idFactura);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            lista.Add(new ProductosFactura
+                            {
+                                id = reader.GetInt32("id"),
+                                id_factura = reader.GetInt32("id_factura"),
+                                id_producto = reader.GetInt32("id_producto"),
+                                cantidad = reader.GetInt32("cantidad"),
+                                subtotal = reader.GetDecimal("subtotal")
+                            });
+                        }
+                    }
+                }
+            }
+            return lista;
         }
 
 

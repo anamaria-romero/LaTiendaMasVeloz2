@@ -35,12 +35,13 @@
             btClientes = new Button();
             lbTituloMenu = new Label();
             lbTituloPagina = new Label();
+            btProductoProveedor = new Button();
             SuspendLayout();
             // 
             // btVentas
             // 
             btVentas.BackColor = SystemColors.ActiveCaption;
-            btVentas.Location = new Point(166, 188);
+            btVentas.Location = new Point(298, 146);
             btVentas.Name = "btVentas";
             btVentas.Size = new Size(115, 56);
             btVentas.TabIndex = 13;
@@ -73,7 +74,7 @@
             // btUsuarios
             // 
             btUsuarios.BackColor = SystemColors.ActiveCaption;
-            btUsuarios.Location = new Point(298, 146);
+            btUsuarios.Location = new Point(39, 146);
             btUsuarios.Name = "btUsuarios";
             btUsuarios.Size = new Size(115, 56);
             btUsuarios.TabIndex = 10;
@@ -84,7 +85,7 @@
             // btClientes
             // 
             btClientes.BackColor = SystemColors.ActiveCaption;
-            btClientes.Location = new Point(39, 146);
+            btClientes.Location = new Point(170, 146);
             btClientes.Name = "btClientes";
             btClientes.Size = new Size(115, 56);
             btClientes.TabIndex = 9;
@@ -112,11 +113,23 @@
             lbTituloPagina.TabIndex = 8;
             lbTituloPagina.Text = "LA TIENDA MAS VELOZ";
             // 
+            // btProductoProveedor
+            // 
+            btProductoProveedor.BackColor = SystemColors.ActiveCaption;
+            btProductoProveedor.Location = new Point(170, 231);
+            btProductoProveedor.Name = "btProductoProveedor";
+            btProductoProveedor.Size = new Size(115, 56);
+            btProductoProveedor.TabIndex = 14;
+            btProductoProveedor.Text = "PRODUCTO - PROVEEDOR";
+            btProductoProveedor.UseVisualStyleBackColor = false;
+            btProductoProveedor.Click += btProductoProveedor_Click;
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(456, 320);
+            Controls.Add(btProductoProveedor);
             Controls.Add(btVentas);
             Controls.Add(btProveedores);
             Controls.Add(btInventario);
@@ -139,5 +152,6 @@
         private Button btClientes;
         private Label lbTituloMenu;
         private Label lbTituloPagina;
+        private Button btProductoProveedor;
     }
 }
