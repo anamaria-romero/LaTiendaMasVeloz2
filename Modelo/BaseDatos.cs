@@ -29,7 +29,7 @@ namespace Logica
             using (MySqlConnection conexion = GetConnection())
             {
                 conexion.Open();
-                string query = "SELECT documento, nombre, telefono FROM ClienteEntity WHERE documento = @documento"; 
+                string query = "SELECT documento, nombre, telefono FROM ClienteEntity WHERE documento = @documento";
                 using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                 {
                     cmd.Parameters.AddWithValue("@documento", documento);
@@ -57,7 +57,7 @@ namespace Logica
             {
                 conexion.Open();
                 MySqlCommand cmd = conexion.CreateCommand();
-                cmd.CommandText = "UPDATE ClienteEntity SET nombre = @nombre, telefono = @telefono WHERE documento = @documento"; 
+                cmd.CommandText = "UPDATE ClienteEntity SET nombre = @nombre, telefono = @telefono WHERE documento = @documento";
                 cmd.Parameters.AddWithValue("@documento", cliente.documento);
                 cmd.Parameters.AddWithValue("@nombre", cliente.nombre);
                 cmd.Parameters.AddWithValue("@telefono", cliente.telefono);
@@ -101,7 +101,7 @@ namespace Logica
             using (MySqlConnection conexion = GetConnection())
             {
                 conexion.Open();
-                string query = "SELECT id, nombre, marca, cantidad, precio, id_proveedor, referencia FROM ProductoEntity WHERE id = @id"; 
+                string query = "SELECT id, nombre, marca, cantidad, precio, id_proveedor, referencia FROM ProductoEntity WHERE id = @id";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                 {
@@ -142,7 +142,7 @@ namespace Logica
                     cmd.Parameters.AddWithValue("@cantidad", producto.cantidad);
                     cmd.Parameters.AddWithValue("@precio", producto.precio);
                     cmd.Parameters.AddWithValue("@id_proveedor", producto.id_proveedor);
-                    cmd.Parameters.AddWithValue("@id", producto.id); 
+                    cmd.Parameters.AddWithValue("@id", producto.id);
 
                     return cmd.ExecuteNonQuery();
                 }
@@ -156,7 +156,7 @@ namespace Logica
             {
                 conexion.Open();
                 MySqlCommand cmd = conexion.CreateCommand();
-                cmd.CommandText = "DELETE FROM ProductoEntity WHERE id = @id"; 
+                cmd.CommandText = "DELETE FROM ProductoEntity WHERE id = @id";
                 cmd.Parameters.AddWithValue("@id", id);
                 return cmd.ExecuteNonQuery();
             }
@@ -182,7 +182,7 @@ namespace Logica
             {
                 conexion.Open();
                 MySqlCommand cmd = conexion.CreateCommand();
-                cmd.CommandText = "SELECT * FROM ProveedorEntity WHERE documento = @documento"; 
+                cmd.CommandText = "SELECT * FROM ProveedorEntity WHERE documento = @documento";
                 cmd.Parameters.AddWithValue("@documento", documento);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -207,7 +207,7 @@ namespace Logica
                 conexion.Open();
                 using (MySqlCommand cmd = conexion.CreateCommand())
                 {
-                    cmd.CommandText = "UPDATE ProveedorEntity SET nombre = @nombre, telefono = @telefono WHERE documento = @documento"; 
+                    cmd.CommandText = "UPDATE ProveedorEntity SET nombre = @nombre, telefono = @telefono WHERE documento = @documento";
 
                     cmd.Parameters.AddWithValue("@nombre", proveedor.nombre);
                     cmd.Parameters.AddWithValue("@telefono", proveedor.telefono);
@@ -224,7 +224,7 @@ namespace Logica
             {
                 conexion.Open();
                 MySqlCommand cmd = conexion.CreateCommand();
-                cmd.CommandText = "DELETE FROM ProveedorEntity WHERE documento = @documento"; 
+                cmd.CommandText = "DELETE FROM ProveedorEntity WHERE documento = @documento";
                 cmd.Parameters.AddWithValue("@documento", documento);
                 return cmd.ExecuteNonQuery();
             }
@@ -306,7 +306,7 @@ namespace Logica
             {
                 conexion.Open();
                 MySqlCommand cmd = conexion.CreateCommand();
-                cmd.CommandText = "DELETE FROM UsuarioEntity WHERE documento = @documento"; 
+                cmd.CommandText = "DELETE FROM UsuarioEntity WHERE documento = @documento";
                 cmd.Parameters.AddWithValue("@documento", documento);
                 return cmd.ExecuteNonQuery();
             }
@@ -394,19 +394,19 @@ namespace Logica
 
 
         public int EliminarProductoProveedor(int id)
-{
-    using (MySqlConnection conexion = GetConnection())
-    {
-        conexion.Open();
-        string query = "DELETE FROM ProductoProveedor WHERE id = @id";
-
-        using (MySqlCommand cmd = new MySqlCommand(query, conexion))
         {
-            cmd.Parameters.AddWithValue("@id", id);
-            return cmd.ExecuteNonQuery();
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "DELETE FROM ProductoProveedor WHERE id = @id";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return cmd.ExecuteNonQuery();
+                }
+            }
         }
-    }
-}
 
 
         public int CrearFactura(FacturaEntity factura)
@@ -421,7 +421,7 @@ namespace Logica
                 using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                 {
                     cmd.Parameters.AddWithValue("@id_cliente", factura.id_cliente);
-                    cmd.Parameters.AddWithValue("@id_usuario", factura.id_usuario); 
+                    cmd.Parameters.AddWithValue("@id_usuario", factura.id_usuario);
                     cmd.Parameters.AddWithValue("@total", factura.total);
 
                     return Convert.ToInt32(cmd.ExecuteScalar());
@@ -545,6 +545,122 @@ namespace Logica
             return lista;
         }
 
+        public bool ActualizarFactura(FacturaEntity factura)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = @"UPDATE FacturaEntity 
+                         SET id_cliente = @id_cliente, 
+                             id_usuario = @id_usuario, 
+                             fecha = @fecha, 
+                             total = @total 
+                         WHERE id = @id";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", factura.id);
+                    cmd.Parameters.AddWithValue("@id_cliente", factura.id_cliente);
+                    cmd.Parameters.AddWithValue("@id_usuario", factura.id_usuario);
+                    cmd.Parameters.AddWithValue("@fecha", factura.fecha);
+                    cmd.Parameters.AddWithValue("@total", factura.total);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public void EliminarProductosPorFactura(int idFactura)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "DELETE FROM ProductosFactura WHERE id_factura = @idFactura";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@idFactura", idFactura);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public string ObtenerNombreProductoPorId(int idProducto)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT nombre FROM ProductoEntity WHERE id_producto = @idProducto";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@idProducto", idProducto);
+                    object resultado = cmd.ExecuteScalar();
+                    return resultado != null ? resultado.ToString() : "Producto desconocido";
+                }
+            }
+        }
+
+        public int ObtenerIdProductoPorNombre(string nombreProducto)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT id_producto FROM ProductoEntity WHERE nombre = @nombreProducto";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@nombreProducto", nombreProducto);
+                    object resultado = cmd.ExecuteScalar();
+                    return resultado != null ? Convert.ToInt32(resultado) : -1;
+                }
+            }
+        }
+
+
+        public void EliminarFactura(int idFactura)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "DELETE FROM FacturaEntity WHERE id = @id"; 
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", idFactura);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public FacturaEntity ObtenerFacturaPorId(int idFactura)
+        {
+            using (MySqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                string query = "SELECT * FROM FacturaEntity WHERE id = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@id", idFactura);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new FacturaEntity
+                            {
+                                id = reader.GetInt32("id"),
+                                id_cliente = reader.GetInt32("id_cliente"),
+                                id_usuario = reader.GetInt32("id_usuario"),
+                                total = reader.GetDecimal("total"),
+                                fecha = reader.GetDateTime("fecha")
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
 
     }
 }

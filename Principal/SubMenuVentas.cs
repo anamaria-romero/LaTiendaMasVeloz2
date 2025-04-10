@@ -38,6 +38,18 @@ namespace Principal
             this.Hide();
         }
 
+        private void btActualizarVenta_Click(object sender, EventArgs e)
+        {
+            ActualizarFactura menu = new ActualizarFactura();
+            menu.Show();
+            this.Hide();
+        }
 
+        private void btEliminarVenta_Click(object sender, EventArgs e)
+        {
+            EliminarFactura menu = new EliminarFactura();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

@@ -42,5 +42,11 @@ namespace Logica
         {
             return db.MostrarProducto(idProducto);
         }
+
+        public bool ActualizarFactura(FacturaEntity factura)
+        {
+            return db.ActualizarFactura(factura);
+        }
+
     }
 }
