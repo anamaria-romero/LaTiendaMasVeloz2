@@ -42,12 +42,7 @@
             tbTotalActualizar = new TextBox();
             tbIdArticuloActualizar = new TextBox();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             btCargaralalistaFacturaActualizar = new Button();
-            btBuscarFacturaActualizar = new Button();
             lbActualizarFechaFactura = new Label();
             lbTotalFacturaActualizar = new Label();
             lbIdEmpleadoActualizar = new Label();
@@ -57,6 +52,10 @@
             lbIdFacturaActualizar = new Label();
             tbIdFacturaActualizar = new TextBox();
             btBuscarIdFactura = new Button();
+            NombreDelArticulo = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            SubTotal = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -78,7 +77,6 @@
             tbCantidadProductoActualizar.Name = "tbCantidadProductoActualizar";
             tbCantidadProductoActualizar.Size = new Size(163, 23);
             tbCantidadProductoActualizar.TabIndex = 55;
-            tbCantidadProductoActualizar.TextChanged += tbCantidadProductoActualizar_TextChanged;
             // 
             // lbCantidadProductoFacturaActualizar
             // 
@@ -107,7 +105,6 @@
             tbEfectivoFacturaActualizar.Name = "tbEfectivoFacturaActualizar";
             tbEfectivoFacturaActualizar.Size = new Size(124, 23);
             tbEfectivoFacturaActualizar.TabIndex = 52;
-            tbEfectivoFacturaActualizar.TextChanged += tbEfectivoFacturaActualizar_TextChanged;
             // 
             // label4
             // 
@@ -137,7 +134,6 @@
             lbTotalpagarFacturaActualizar.Size = new Size(88, 19);
             lbTotalpagarFacturaActualizar.TabIndex = 15;
             lbTotalpagarFacturaActualizar.Text = "Total a pagar";
-            lbTotalpagarFacturaActualizar.Click += lbTotalpagarFacturaActualizar_Click;
             // 
             // dateTimePicker1
             // 
@@ -145,7 +141,6 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(228, 23);
             dateTimePicker1.TabIndex = 49;
-            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // tbIdClienteActualizar
             // 
@@ -153,7 +148,6 @@
             tbIdClienteActualizar.Name = "tbIdClienteActualizar";
             tbIdClienteActualizar.Size = new Size(163, 23);
             tbIdClienteActualizar.TabIndex = 48;
-            tbIdClienteActualizar.TextChanged += tbIdClienteActualizar_TextChanged;
             // 
             // tbIdEmpleadoActualizar
             // 
@@ -161,7 +155,6 @@
             tbIdEmpleadoActualizar.Name = "tbIdEmpleadoActualizar";
             tbIdEmpleadoActualizar.Size = new Size(163, 23);
             tbIdEmpleadoActualizar.TabIndex = 47;
-            tbIdEmpleadoActualizar.TextChanged += tbIdEmpleadoActualizar_TextChanged;
             // 
             // tbTotalActualizar
             // 
@@ -169,7 +162,6 @@
             tbTotalActualizar.Name = "tbTotalActualizar";
             tbTotalActualizar.Size = new Size(163, 23);
             tbTotalActualizar.TabIndex = 46;
-            tbTotalActualizar.TextChanged += tbTotalActualizar_TextChanged;
             // 
             // tbIdArticuloActualizar
             // 
@@ -177,39 +169,16 @@
             tbIdArticuloActualizar.Name = "tbIdArticuloActualizar";
             tbIdArticuloActualizar.Size = new Size(163, 23);
             tbIdArticuloActualizar.TabIndex = 45;
-            tbIdArticuloActualizar.TextChanged += tbIdArticuloActualizar_TextChanged;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NombreDelArticulo, Cantidad, Column3, SubTotal });
             dataGridView1.Location = new Point(42, 399);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(528, 132);
+            dataGridView1.Size = new Size(528, 77);
             dataGridView1.TabIndex = 44;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nombre del articulo";
-            Column1.Name = "Column1";
-            Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Cantidad";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Precio Unitario";
-            Column3.Name = "Column3";
-            Column3.Width = 130;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "SubTotal";
-            Column4.Name = "Column4";
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // btCargaralalistaFacturaActualizar
             // 
@@ -221,17 +190,6 @@
             btCargaralalistaFacturaActualizar.Text = "Cargar a la lista";
             btCargaralalistaFacturaActualizar.UseVisualStyleBackColor = false;
             btCargaralalistaFacturaActualizar.Click += btCargaralalistaFacturaActualizar_Click;
-            // 
-            // btBuscarFacturaActualizar
-            // 
-            btBuscarFacturaActualizar.BackColor = SystemColors.ActiveCaption;
-            btBuscarFacturaActualizar.Location = new Point(292, 229);
-            btBuscarFacturaActualizar.Name = "btBuscarFacturaActualizar";
-            btBuscarFacturaActualizar.Size = new Size(91, 22);
-            btBuscarFacturaActualizar.TabIndex = 42;
-            btBuscarFacturaActualizar.Text = "Buscar";
-            btBuscarFacturaActualizar.UseVisualStyleBackColor = false;
-            btBuscarFacturaActualizar.Click += btBuscarFacturaActualizar_Click;
             // 
             // lbActualizarFechaFactura
             // 
@@ -309,7 +267,6 @@
             tbIdFacturaActualizar.Name = "tbIdFacturaActualizar";
             tbIdFacturaActualizar.Size = new Size(163, 23);
             tbIdFacturaActualizar.TabIndex = 58;
-            tbIdFacturaActualizar.TextChanged += tbIdFacturaActualizar_TextChanged;
             // 
             // btBuscarIdFactura
             // 
@@ -322,11 +279,33 @@
             btBuscarIdFactura.UseVisualStyleBackColor = false;
             btBuscarIdFactura.Click += btBuscarIdFactura_Click;
             // 
+            // NombreDelArticulo
+            // 
+            NombreDelArticulo.HeaderText = "Nombre del articulo";
+            NombreDelArticulo.Name = "NombreDelArticulo";
+            NombreDelArticulo.Width = 150;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.Name = "Cantidad";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Precio Unitario";
+            Column3.Name = "Column3";
+            Column3.Width = 130;
+            // 
+            // SubTotal
+            // 
+            SubTotal.HeaderText = "SubTotal";
+            SubTotal.Name = "SubTotal";
+            // 
             // ActualizarFactura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(618, 492);
+            ClientSize = new Size(618, 493);
             Controls.Add(btBuscarIdFactura);
             Controls.Add(tbIdFacturaActualizar);
             Controls.Add(lbIdFacturaActualizar);
@@ -344,7 +323,6 @@
             Controls.Add(tbIdArticuloActualizar);
             Controls.Add(dataGridView1);
             Controls.Add(btCargaralalistaFacturaActualizar);
-            Controls.Add(btBuscarFacturaActualizar);
             Controls.Add(lbActualizarFechaFactura);
             Controls.Add(lbTotalFacturaActualizar);
             Controls.Add(lbIdEmpleadoActualizar);
@@ -376,12 +354,7 @@
         private TextBox tbTotalActualizar;
         private TextBox tbIdArticuloActualizar;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
         private Button btCargaralalistaFacturaActualizar;
-        private Button btBuscarFacturaActualizar;
         private Label lbActualizarFechaFactura;
         private Label lbTotalFacturaActualizar;
         private Label lbIdEmpleadoActualizar;
@@ -391,5 +364,9 @@
         private Label lbIdFacturaActualizar;
         private TextBox tbIdFacturaActualizar;
         private Button btBuscarIdFactura;
+        private DataGridViewTextBoxColumn NombreDelArticulo;
+        private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn SubTotal;
     }
 }

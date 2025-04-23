@@ -606,7 +606,7 @@ namespace Logica
             using (MySqlConnection conexion = GetConnection())
             {
                 conexion.Open();
-                string query = "SELECT id_producto FROM ProductoEntity WHERE nombre = @nombreProducto";
+                string query = "SELECT id FROM ProductoEntity WHERE nombre = @nombreProducto";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conexion))
                 {

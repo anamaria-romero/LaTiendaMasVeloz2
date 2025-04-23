@@ -284,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(621, 483);
+            ClientSize = new Size(621, 521);
             Controls.Add(btVolver);
             Controls.Add(tbCantidad);
             Controls.Add(lbCantidadProductoFactura);

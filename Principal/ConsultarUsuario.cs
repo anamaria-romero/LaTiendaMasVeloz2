@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Logica;
 using Modelo.Entities;
+using MySqlX.XDevAPI;
 
 namespace Principal
 {
@@ -27,7 +28,7 @@ namespace Principal
 
             if (usuario != null)
             {
-                lbMostrarUsuario.Text = $"Nombre: {usuario.nombre}\nRol: {usuario.rol}\nContraseña: {usuario.contraseña}";
+                lbMostrarUsuario.Text = $"Id: {usuario.id}\nNombre: {usuario.nombre}\nRol: {usuario.rol}\nContraseña: {usuario.contraseña}";
             }
             else
             {

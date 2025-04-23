@@ -14,6 +14,10 @@ namespace Modelo.Entities
         public int id_producto { get; set; }
         public int cantidad { get; set; }
         public decimal subtotal { get; set; }
+
+        public string nombre { get; set; }
+        public decimal precio { get; set; }
     }
+
 
 }

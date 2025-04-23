@@ -29,7 +29,7 @@ namespace Principal
 
             if (cliente != null)
             {
-                lbMostrarCliente.Text = $"Nombre: {cliente.nombre}\nTeléfono: {cliente.telefono}";
+                lbMostrarCliente.Text =  $"Nombre: {cliente.nombre}\nTeléfono: {cliente.telefono}";
             }
             else
             {

@@ -41,7 +41,7 @@
             // btVentas
             // 
             btVentas.BackColor = SystemColors.ActiveCaption;
-            btVentas.Location = new Point(298, 146);
+            btVentas.Location = new Point(170, 149);
             btVentas.Name = "btVentas";
             btVentas.Size = new Size(115, 56);
             btVentas.TabIndex = 13;
@@ -74,7 +74,7 @@
             // btUsuarios
             // 
             btUsuarios.BackColor = SystemColors.ActiveCaption;
-            btUsuarios.Location = new Point(39, 146);
+            btUsuarios.Location = new Point(301, 149);
             btUsuarios.Name = "btUsuarios";
             btUsuarios.Size = new Size(115, 56);
             btUsuarios.TabIndex = 10;
@@ -85,7 +85,7 @@
             // btClientes
             // 
             btClientes.BackColor = SystemColors.ActiveCaption;
-            btClientes.Location = new Point(170, 146);
+            btClientes.Location = new Point(42, 149);
             btClientes.Name = "btClientes";
             btClientes.Size = new Size(115, 56);
             btClientes.TabIndex = 9;
